@@ -1,0 +1,26 @@
+
+/*--------------------------------- Main Navigation*/
+
+.navbar-colour {
+    background-color: #2D3039;
+}
+
+.logo {
+    color: #EEEEEE;
+}
+
+.nav-link-colour {
+    color: #EEEEEE;
+}
+
+.nav-link {
+    margin-right: 20px;
+}
+
+.nav-link-colour:hover {
+    color: #113B92;
+}
+
+nav img {
+    margin-right:10px;
+}

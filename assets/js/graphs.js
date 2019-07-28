@@ -1,4 +1,4 @@
-queue()
+/* queue()
       .defer(d3.json, "assets/data/london_road_casualties.json")
       .await(makeGraphs);
      
@@ -42,3 +42,5 @@ function show_fatal_vs_serious_severity(ndx) {
     .dimension(dim)
     .group(group);
 }
+
+*/

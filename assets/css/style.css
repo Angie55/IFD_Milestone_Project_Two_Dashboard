@@ -1,4 +1,10 @@
 
+nav a {
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+
+
 /*--------------------------------- Main Navigation*/
 
 .navbar-colour {
@@ -27,30 +33,7 @@ nav img {
 
 /*--------------------------------- Header*/
 
-.header-container {
-  position: relative;  
-  height: 25vh;
-}
 
-.header-intro-box {
-    height: 400px;
-    width: 1000px;
-    background-color: #2D3039;
-    opacity: 0.8;
-    position: absolute;
-    color: white;
-    top: 40%;
-    left: 25%;
-    
-}
-
-.header-image {
-    position: absolute;
-}
-
-.header-intro-box p {
-    padding: 10px;
-}
 
 /*--------------------------------- Header*/
 
@@ -69,3 +52,12 @@ footer {
 .github-link li a i {
     font-size: 20px;
 }
+
+
+/*--------------------------------- Main section*/
+.stats-block {
+    background-color: #EEEEEE;
+    color: #113B92;
+    margin-top: 30px;
+}
+

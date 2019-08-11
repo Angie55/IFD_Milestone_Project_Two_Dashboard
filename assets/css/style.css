@@ -64,11 +64,26 @@ footer {
     color: #2070B0;
 }
 
+/*--------------------------------- Pies and donut section*/
+
+.pie-donut-section {
+   background-color: #EEEEEE;
+    padding-top: 10px;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #2070B0; 
+}
+
 /*--------------------------------- Incidents by borough section*/
 
 .borough-incidents-barchart {
-    margin-top: 30px;
+    margin-top: 50px;
+    background-color: #EEEEEE;
+    
 }
+
+
 
 
 

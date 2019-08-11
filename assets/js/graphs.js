@@ -1,16 +1,55 @@
-/* queue()
+ queue()
       .defer(d3.json, "assets/data/london_road_casualties.json")
       .await(makeGraphs);
      
       
 function makeGraphs(error, casualtyData) {
     var ndx = crossfilter(casualtyData);
-    
+    // Top section number displays
+    show_display_severity_percent(ndx, "Serious", "#percentage-incidents-serious");
+    show_display_severity_percent(ndx, "Fatal", "#percentage-incidents-fatal");
     show_incidents_per_area(ndx);
     show_fatal_vs_serious_severity(ndx);
     
     dc.renderAll();
 }    
+
+//  Top section number dispalys - One set of code for both seperate % severity displays
+
+function show_display_severity_percent(ndx, severity, element) {            
+    var severityPercent = ndx.groupAll().reduce(
+        function(p, v) {
+            p.total++;
+            if (v.severity_of_casualty === severity) {
+                p.severity_count++;
+            }
+            return p;
+        },
+        function(p, v) {
+            p.total--;
+            if (v.severity_of_casualty === severity) {
+                p.severity_count--;
+            }
+            return p;
+        },
+        function() {
+            return { total: 0, severity_count: 0 };
+        }
+    );
+
+    dc.numberDisplay(element)
+        .formatNumber(d3.format('.2%'))
+        .valueAccessor(function(d) {
+            if (d.severity_count == 0) {
+                return 0;
+            }
+            else {
+                return (d.severity_count / d.total);
+            }
+        })
+        .group(severityPercent);
+}
+
 
 function show_incidents_per_area(ndx) {
       var dim = ndx.dimension(dc.pluck('local_authority'));
@@ -43,4 +82,3 @@ function show_fatal_vs_serious_severity(ndx) {
     .group(group);
 }
 
-*/

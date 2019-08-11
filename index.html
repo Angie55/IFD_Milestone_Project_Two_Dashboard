@@ -54,38 +54,45 @@
     </header>
     
     
-<!-- Graphs -->    
+<!-- Top section stats -->   
     <section>
-      <div class="container page-width-container">
+      <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-3 col-sm-12 card text-center top-stats">
             <h6>No. of incidents 2010-2014</h6>
+            <div id="total-num-of-incidents"></div>
           </div>
           <div class="col-md-3 col-sm-12 card text-center top-stats">
-            <h6>No. of incidents 2010-2014</h6>
+            <h6>Percentage of incidents that are serious</h6>
+            <div id="percentage-incidents-serious"></div>
           </div>
           <div class="col-md-3 col-sm-12 card text-center top-stats">
-            <h6>No. of incidents 2010-2014</h6>
+            <h6>Percentage of incidents that are fatal</h6>
+            <div id="percentage-incidents-fatal"></div>
           </div>
         </div>
-        
       </div>
     </section>
     
-    <div>
-        <h3>Incidents by Areas on London</h3>
-        
-        <div id="incidents_per_area"></div>
-    </div>
+<!-- Graphs -->  
+    <div class="container ">
+      <div class="row justify-content-center">
+        <div class="col-12 card text-center borough-incidents-barchart">
+          <h6>Incidents by Areas on London</h6>
+          
+          <div id="incidents_per_area"></div>
+        </div>
+      </div>
     
-    <div>
+      <div>
         <h3>Number of fatal vs serious incidents</h3>
         
         <div id="fatal_serious_incidents"></div>
+      </div>  
     </div>
     
     
-<!-- Graphs -->
+<!-- Footer -->
 
     <footer class="container-fluid">
          <div class="github-link">

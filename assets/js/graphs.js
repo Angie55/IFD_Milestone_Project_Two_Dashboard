@@ -75,11 +75,18 @@ function show_day_of_week_most_incidents_occur(ndx) {
     
     dc.pieChart("#incidents_day_of_week")
     .height(300) 
-    .radius(120)
+    .radius(150)
     .innerRadius(50)
     .transitionDuration(500)
     .dimension(dim)
-    .group(group);
+    .group(group)
+    //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
+    .on('pretransition', function(chart) {
+        chart.selectAll('text.pie-slice').text(function(d) {
+            return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+        });
+    });
+    //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
 }
 
 

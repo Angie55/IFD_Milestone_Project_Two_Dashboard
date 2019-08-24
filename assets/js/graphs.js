@@ -5,6 +5,7 @@
       
 function makeGraphs(error, casualtyData) {
     var ndx = crossfilter(casualtyData);
+    
     // Top section number displays
     show_display_severity_percent(ndx, "Serious", "#percentage-incidents-serious");
     show_display_severity_percent(ndx, "Fatal", "#percentage-incidents-fatal");
@@ -17,6 +18,7 @@ function makeGraphs(error, casualtyData) {
     show_vehicles_involved(ndx);
     
     
+
     dc.renderAll();
 }    
 
@@ -44,7 +46,7 @@ function show_display_severity_percent(ndx, severity, element) {
     );
 
     dc.numberDisplay(element)
-        .formatNumber(d3.format('.2%'))
+        .formatNumber(d3.format('%'))
         .valueAccessor(function(d) {
             if (d.severity_count == 0) {
                 return 0;
@@ -120,7 +122,6 @@ function show_incidents_per_area(ndx) {
           
 }
 
-
 //  Row chart of vehicles involved
 
 function show_vehicles_involved(ndx) {
@@ -136,30 +137,18 @@ function show_vehicles_involved(ndx) {
         .group(group);
 }
 
-
-//  Bar chart to show number of incidents within bouroughs of London
-
-function show_incidents_per_year(ndx) {
-      var dim = ndx.dimension(dc.pluck('date'));
-      var group = dim.group();
-      
-      dc.barChart("#incidents_per_year")
-          .width(1100)
-          .height(600)
-          .margins({top:30, right: 50, bottom: 80, left: 50})
-          .dimension(dim)
-          .group(group)
-          .transitionDuration(500)
-          .renderlet(function (chart) {
-            chart.selectAll("g.x text")
-                .attr('transform', "rotate(-80)");
-           })
-          .renderLabel(true)
-          .x(d3.scale.ordinal())
-          .xUnits(dc.units.ordinal)
-          .elasticY(true)
-          .yAxisLabel("No. of incidents")
-          .xAxisLabel("Local Authority")
-          .yAxis().ticks(30);
-          
+function show_casualties_by_age(ndx) {
+    var dim = ndx.dimension(dc.pluck('age'));
+    var ageGroup = ageDim(function(v) {
+        if(v < 13) return '0-12';
+        else if(v < 26) return '13-25';
+        else if(v < 39) return '26-38';
+        else if(v < 51) return '39-50';
+        else if(v < 64) return '51-63';
+        else if(v < 76) return '64-75';
+        else if(v < 88) return '76-87';
+        else if(v < 100) return '88-99';
+        else return 'unknown';
+    });
+    
 }

@@ -1,13 +1,17 @@
+body {
+    background-image: url(../images/asphalt_background_dark1.png);
+    font-family: 'Cabin', sans-serif;
+}
 
-nav a {
-    font-family: 'Hammersmith One', sans-serif;
+h4 {
+    font-family: 'Hammersmith One' , sans-serif;
 }
 
 
 /*--------------------------------- Main Navigation*/
 
 .navbar-colour {
-    background-color: #2D3039;
+    background-color: rgba(45, 48, 57, 0.7);
 }
 
 .logo {
@@ -32,7 +36,15 @@ nav img {
 
 /*--------------------------------- Header*/
 
-
+/*--------------------------------- Intro*/
+.intro {
+    background-color: #EEEEEE;
+    color: #113B92;
+    padding: 10px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.80);
+    max-width: 80%;
+}
 
 /*--------------------------------- Footer*/
 
@@ -59,20 +71,28 @@ footer {
     background-color: #EEEEEE;
     padding-top: 10px;
     margin-top: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #2070B0;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #113B92;
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.80);
+    
+}
+
+.num-display {
+    font-size: 2em;
 }
 
 /*--------------------------------- Pies and donut section*/
 
 .pie-donut-section {
-   background-color: #EEEEEE;
+    background-color: #EEEEEE;
     padding-top: 10px;
     margin-top: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #2070B0; 
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #113B92;
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.80);
+    
 }
 
 /*--------------------------------- Incidents by borough section*/

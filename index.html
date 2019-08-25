@@ -54,7 +54,7 @@
     <section> 
       <div class=" container-fluid">
         <div class="row justify-content-center">
-          <div class="col-12 card text-center card-styling intro">
+          <div class="col-10 card text-center card-styling intro">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
             dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -73,15 +73,15 @@
     <section>
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
+          <div class="col-md-3 col-sm-10 card text-center card-styling top-stats">
             <h5>No. of incidents 2010-2014</h6>
             <div class="num-display" id="total-num-of-incidents"><i class="fas fa-clipboard-list top-stats-icon"></i></div>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
+          <div class="col-md-3 col-sm-10 card text-center card-styling top-stats">
             <h5>Percentage of incidents that are serious</h6>
             <div class="num-display" id="percentage-incidents-serious"><i class="fas fa-exclamation top-stats-icon"></i></div>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
+          <div class="col-md-3 col-sm-10 card text-center card-styling top-stats">
             <h5>Percentage of incidents that are fatal</h6>
             <div class="num-display" id="percentage-incidents-fatal"><i class="fas fa-skull-crossbones top-stats-icon"></i></div>
           </div>
@@ -101,16 +101,16 @@
     <section>
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section">
+          <div class="col-md-3 col-sm-10 card text-center card-styling pie-donut-section">
             <h5>Number of males and females involved in incidents</h3>
           <div id="male_female_casualties"></div>
           <p> Males are more than twice as likely to be a casualty in a road accident in London.</p>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section">
+          <div class="col-md-3 col-sm-10 card text-center card-styling pie-donut-section">
             <h5>Percentage of incidents per day of the week</h3>
           <div id="incidents_day_of_week"></div>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section ">
+          <div class="col-md-3 col-sm-10 card text-center card-styling pie-donut-section ">
             <h5>Number of casulaties per casualty class</h3>
           <div id="casualty_class_percentage"></div>
           <p>Drivers and riders are more likely to be casualties in incidents, it's slightly safer to be 
@@ -127,20 +127,20 @@
     </div>  
 
 <!-- Bar chart- incidents per area -->
-    <div class="container">
+    <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-12 card text-center card-styling area-incidents-barchart">
+        <div class="col-10 card text-center card-styling area-incidents-barchart">
           <h5>Incidents by Areas on London</h5>
           
-          <div id="incidents_per_area"></div>
+          <div id="incidents_per_area" class="incidents_per_area_style"></div>
         </div>
       </div>
     </div>
     
 <!-- Row chart- vehicle types invloved -->    
-    <div class="container">
+    <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-12 card text-center card-styling vehicle-type-rowchart">
+        <div class="col-10 card text-center card-styling vehicle-type-rowchart">
           <h6>Row chart vehicles types involved</h6>
           
           <div id="vehicle_type"></div>

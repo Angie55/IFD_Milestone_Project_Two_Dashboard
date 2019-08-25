@@ -5,6 +5,7 @@ body {
 
 h5 {
     font-family: 'Hammersmith One' , sans-serif;
+    padding-top: 20px;
 }
 
 
@@ -58,13 +59,11 @@ nav img {
 .intro {
     padding: 10px;
     margin-top: 50px;
-    max-width: 80%;
 }
 
 /*--------------------------------- Top section stats -number displays*/
 
 .top-stats {
-    padding-top: 10px;
     padding-bottom: 30px;
     margin-top: 30px;
     margin-right: 20px;
@@ -86,7 +85,6 @@ nav img {
 /*--------------------------------- Pies and donut section */
 
 .pie-donut-section {
-    padding-top: 10px;
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
@@ -97,7 +95,7 @@ nav img {
     padding-top: 10px;
 }
 
-/*--------------------------------- Incidents by area section*/
+/*--------------------------------- Bar chart- Incidents by area section*/
 
 .area-incidents-barchart {
     margin-top: 50px;
@@ -105,6 +103,13 @@ nav img {
 
 .vehicle-type-rowchart {
     margin-top: 50px;
+}
+
+.incidents_per_area_style .axis.x text {
+    -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  text-anchor: end !important;
+  font-size: 0.7rem;
 }
 
 /*--------------------------------- Footer*/

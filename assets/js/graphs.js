@@ -68,20 +68,22 @@ function show_percentage_male_female(ndx) {
     var group = dim.group();
     
     dc.pieChart("#male_female_casualties")
-    .height(300) 
-    .radius(140)
-    .transitionDuration(500)
-    .dimension(dim)
-    .group(group)
-    .colorAccessor(function(d) {
-            return d.key;
-        })
-    .colors(pieColours)
-    .on('pretransition', function(chart) {
-        chart.selectAll('text.pie-slice').text(function(d) {
-            return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+        .height(300) 
+        .radius(140)
+        .transitionDuration(500)
+        .useViewBoxResizing(true)
+        .dimension(dim)
+        .group(group)
+        .colorAccessor(function(d) {
+                return d.key;
+            })
+        .colors(pieColours)
+        .on('pretransition', function(chart) {
+            chart.selectAll('text.pie-slice').text(function(d) {
+                return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+            });
         });
-    });
+    
 }
 
 //  Donut chart to show day of week most incidents occur
@@ -90,19 +92,20 @@ function show_day_of_week_most_incidents_occur(ndx) {
     var group = dim.group();
     
     dc.pieChart("#incidents_day_of_week")
-    .height(300) 
-    .radius(150)
-    .innerRadius(50)
-    .transitionDuration(500)
-    .dimension(dim)
-    .group(group)
-    //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
-    .on('pretransition', function(chart) {
-        chart.selectAll('text.pie-slice').text(function(d) {
-            return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+        .height(300) 
+        .radius(150)
+        .innerRadius(50)
+        .transitionDuration(500)
+        .useViewBoxResizing(true)
+        .dimension(dim)
+        .group(group)
+        //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
+        .on('pretransition', function(chart) {
+            chart.selectAll('text.pie-slice').text(function(d) {
+                return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+            });
         });
-    });
-    //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
+        //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
 }
 
 //  Pie chart showing percentage of casualties in each class
@@ -114,20 +117,21 @@ function show_percentage_casualty_class(ndx) {
     var group = dim.group();
     
     dc.pieChart("#casualty_class_percentage")
-    .height(300) 
-    .radius(140)
-    .transitionDuration(500)
-    .dimension(dim)
-    .group(group)
-    .colorAccessor(function(d) {
-            return d.key;
-        })
-    .colors(pieColours)
-    .on('pretransition', function(chart) {
-        chart.selectAll('text.pie-slice').text(function(d) {
-            return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+        .height(300) 
+        .radius(140)
+        .transitionDuration(500)
+        .useViewBoxResizing(true)
+        .dimension(dim)
+        .group(group)
+        .colorAccessor(function(d) {
+                return d.key;
+            })
+        .colors(pieColours)
+        .on('pretransition', function(chart) {
+            chart.selectAll('text.pie-slice').text(function(d) {
+                return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+            });
         });
-    });
 }
 
 
@@ -138,20 +142,18 @@ function show_incidents_per_area(ndx) {
       var group = dim.group();
       
       dc.barChart("#incidents_per_area")
-          .width(1100)
-          .height(600)
-          .margins({top:30, right: 50, bottom: 150, left: 50})
+          .width(1500)
+          .height(800)
+          .margins({top:30, right: 50, bottom: 130, left: 50})
+          .useViewBoxResizing(true) 
           .dimension(dim)
           .group(group)
           .transitionDuration(500)
-          .renderlet(function (chart) {
-            chart.selectAll("g.x text")
-                .attr('transform', "rotate(-80)");
-           })
           .renderLabel(true)
           .x(d3.scale.ordinal())
           .xUnits(dc.units.ordinal)
           .elasticY(true)
+          .colors('#113B92')
           .yAxisLabel("No. of incidents")
           .xAxisLabel("Local Authority")
           .yAxis().ticks(30);
@@ -163,12 +165,14 @@ function show_vehicles_involved(ndx) {
     var group = dim.group();
     
     dc.rowChart('#vehicle_type') 
-        .width(500)
+        .width(1500)
         .height(500)
+        .useViewBoxResizing(true)
         .x(d3.scale.ordinal())
         .elasticX(true)
         .dimension(dim)
-        .group(group);
+        .group(group)
+        .renderLabel(true);
 }
 
 

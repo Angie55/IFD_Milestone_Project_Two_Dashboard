@@ -22,11 +22,11 @@
     <script type="text/javascript" src="assets/js/dc.min.js"></script>
     <script type="text/javascript" src="assets/js/queue.min.js"></script>
     <script type="text/javascript" src="assets/js/graphs.js"></script>
-    
 </head>
 
 
 <body>
+  
 <!-- Navigation -->    
     <nav class="navbar navbar-expand-lg navbar-colour">
       <a class="navbar-brand logo" href="#">
@@ -47,18 +47,14 @@
     
 <!-- Header -->      
     <header>
-            
       <img class="img-fluid" src="assets/images/header_image.png" alt="time lapse image of streaky lights from traffic and clear red phone box">
-      
-       
     </header>
     
-    
-      
+<!-- Introduction -->     
     <section> 
       <div class=" container-fluid">
         <div class="row justify-content-center">
-          <div class="col-12 card text-center intro">
+          <div class="col-12 card text-center card-styling intro">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
             dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -68,19 +64,19 @@
       </div>
     </section>  
     
-<!-- Top section stats -->   
+<!-- Top section stats -number displays-->   
     <section>
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <div class="col-md-3 col-sm-12 card text-center top-stats">
+          <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
             <h4>No. of incidents 2010-2014</h6>
             <div class="num-display" id="total-num-of-incidents"></div>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center top-stats">
+          <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
             <h4>Percentage of incidents that are serious</h6>
             <div class="num-display" id="percentage-incidents-serious"></div>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center top-stats">
+          <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
             <h4>Percentage of incidents that are fatal</h6>
             <div class="num-display" id="percentage-incidents-fatal"></div>
           </div>
@@ -90,19 +86,19 @@
     
 <!-- Graphs -->  
 
-<!-- Second section pie and donut -->
+<!-- Pie and donut section -->
     <section>
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <div class="col-md-3 col-sm-12 card text-center pie-donut-section">
+          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section">
             <h4>Number of males and females involved in incidents</h3>
           <div id="male_female_casualties"></div>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center pie-donut-section ">
+          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section ">
             <h4>Number of casulaties per age range</h3>
           <div id=""></div>
           </div>
-          <div class="col-md-3 col-sm-12 card text-center pie-donut-section">
+          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section">
             <h4>Percentage of incidents per day of the week</h3>
           <div id="incidents_day_of_week"></div>
           </div>
@@ -110,10 +106,10 @@
       </div>
     </section>
 
-<!-- Third section bar chart - incidents per area -->
+<!-- Bar chart- incidents per area -->
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 card text-center borough-incidents-barchart">
+        <div class="col-12 card text-center card-styling borough-incidents-barchart">
           <h6>Incidents by Areas on London</h6>
           
           <div id="incidents_per_area"></div>
@@ -121,7 +117,7 @@
       </div>
     </div>
     
-<!-- Third section bar chart - incidents per area -->    
+<!-- Row chart- vehicle types invloved -->    
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 card text-center vehicle-type-rowchart">
@@ -132,9 +128,10 @@
       </div>
     </div> 
     
+<!-- Scatter chart- day of week and time incidents occur -->    
      <div class="container">
       <div class="row justify-content-center vehicle-type-rowchart">
-        <div class="col-12 card text-center ">
+        <div class="col-12 card text-center">
           <h6>Scatter chart day of week and time of day </h6>
           
           <div id=""></div>
@@ -142,7 +139,7 @@
       </div>
     </div>
     
-<!--  -->     
+<!-- Line chart- casualty class per year -->     
     <div class="container">
      <div class="row justify-content-center vehicle-type-rowchart">
         <div class="col-12 card text-center ">
@@ -155,7 +152,6 @@
     
     
 <!-- Footer -->
-
     <footer class="container-fluid">
          <div class="github-link">
             <a href="https://github.com/Angie55" target="_blank"><i class="fab fa-github-square"></i></a>

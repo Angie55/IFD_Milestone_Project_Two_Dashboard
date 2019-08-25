@@ -17,8 +17,6 @@ function makeGraphs(error, casualtyData) {
     // Row chart of vehicles involved
     show_vehicles_involved(ndx);
     
-    
-
     dc.renderAll();
 }    
 
@@ -94,9 +92,7 @@ function show_day_of_week_most_incidents_occur(ndx) {
 }
 
 
-
 //  Bar chart to show number of incidents within bouroughs of London
-
 function show_incidents_per_area(ndx) {
       var dim = ndx.dimension(dc.pluck('local_authority'));
       var group = dim.group();
@@ -119,11 +115,9 @@ function show_incidents_per_area(ndx) {
           .yAxisLabel("No. of incidents")
           .xAxisLabel("Local Authority")
           .yAxis().ticks(30);
-          
 }
 
 //  Row chart of vehicles involved
-
 function show_vehicles_involved(ndx) {
     var dim = ndx.dimension(dc.pluck('vehicle_type'));
     var group = dim.group();
@@ -137,6 +131,7 @@ function show_vehicles_involved(ndx) {
         .group(group);
 }
 
+//  Pie chart of number of casualties in each age range
 function show_casualties_by_age(ndx) {
     var dim = ndx.dimension(dc.pluck('age'));
     var ageGroup = ageDim(function(v) {
@@ -150,5 +145,4 @@ function show_casualties_by_age(ndx) {
         else if(v < 100) return '88-99';
         else return 'unknown';
     });
-    
 }

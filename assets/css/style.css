@@ -3,7 +3,7 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
-h4 {
+h5 {
     font-family: 'Hammersmith One' , sans-serif;
 }
 
@@ -36,11 +36,21 @@ nav img {
 
 /*--------------------------------- Header*/
 
+.police_tape {
+    display: block;
+    margin: 70px auto 50px;
+    height: 20px;
+    opacity: 0.8;
+    border-radius: 5px;
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.80);
+}
+
 /*--------------------------------- Chart/info card background styling*/
 
 .card-styling {
     background-color: #EEEEEE;
     color: #113B92;
+    border: 0.5px solid #0666f9;
     box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.80);
 }
 
@@ -55,13 +65,22 @@ nav img {
 
 .top-stats {
     padding-top: 10px;
+    padding-bottom: 30px;
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
 }
 
 .num-display {
-    font-size: 2em;
+    font-size: 3em;
+    color: #0666f9;
+    padding-top: 20px;
+}
+
+.top-stats-icon {
+    padding-right: 50px;
+    font-size: 1.2em;
+    color: #0666f9;
 }
 
 /*--------------------------------- Pies and donut section */
@@ -71,20 +90,21 @@ nav img {
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
+    
 }
 
-/*--------------------------------- Incidents by borough section*/
+.pie-donut-section p {
+    padding-top: 10px;
+}
 
-.borough-incidents-barchart {
+/*--------------------------------- Incidents by area section*/
+
+.area-incidents-barchart {
     margin-top: 50px;
-    background-color: #EEEEEE;
-    
 }
 
 .vehicle-type-rowchart {
     margin-top: 50px;
-    background-color: #EEEEEE;
-    
 }
 
 /*--------------------------------- Footer*/

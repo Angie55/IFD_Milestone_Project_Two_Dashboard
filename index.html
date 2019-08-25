@@ -64,25 +64,36 @@
       </div>
     </section>  
     
+<!-- Police tape seperater-->     
+    <div class="container-fluid justify-content-center">
+      <img src="assets/images/police_tape.png" class="police_tape"></img>
+    </div>
+    
 <!-- Top section stats -number displays-->   
     <section>
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
-            <h4>No. of incidents 2010-2014</h6>
-            <div class="num-display" id="total-num-of-incidents"></div>
+            <h5>No. of incidents 2010-2014</h6>
+            <div class="num-display" id="total-num-of-incidents"><i class="fas fa-clipboard-list top-stats-icon"></i></div>
           </div>
           <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
-            <h4>Percentage of incidents that are serious</h6>
-            <div class="num-display" id="percentage-incidents-serious"></div>
+            <h5>Percentage of incidents that are serious</h6>
+            <div class="num-display" id="percentage-incidents-serious"><i class="fas fa-exclamation top-stats-icon"></i></div>
           </div>
           <div class="col-md-3 col-sm-12 card text-center card-styling top-stats">
-            <h4>Percentage of incidents that are fatal</h6>
-            <div class="num-display" id="percentage-incidents-fatal"></div>
+            <h5>Percentage of incidents that are fatal</h6>
+            <div class="num-display" id="percentage-incidents-fatal"><i class="fas fa-skull-crossbones top-stats-icon"></i></div>
           </div>
         </div>
       </div>
     </section>
+    
+<!-- Police tape seperater-->     
+    <div class="container-fluid justify-content-center">
+      <img src="assets/images/police_tape.png" class="police_tape"></img>
+    </div>  
+    
     
 <!-- Graphs -->  
 
@@ -91,26 +102,35 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section">
-            <h4>Number of males and females involved in incidents</h3>
+            <h5>Number of males and females involved in incidents</h3>
           <div id="male_female_casualties"></div>
-          </div>
-          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section ">
-            <h4>Number of casulaties per age range</h3>
-          <div id=""></div>
+          <p> Males are more than twice as likely to be a casualty in a road accident in London.</p>
           </div>
           <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section">
-            <h4>Percentage of incidents per day of the week</h3>
+            <h5>Percentage of incidents per day of the week</h3>
           <div id="incidents_day_of_week"></div>
           </div>
+          <div class="col-md-3 col-sm-12 card text-center card-styling pie-donut-section ">
+            <h5>Number of casulaties per casualty class</h3>
+          <div id="casualty_class_percentage"></div>
+          <p>Drivers and riders are more likely to be casualties in incidents, it's slightly safer to be 
+          a pedestrian n the streets of London</p>
+          </div>
+          
         </div>
       </div>
     </section>
+    
+<!-- Police tape seperater-->     
+    <div class="container-fluid justify-content-center">
+      <img src="assets/images/police_tape.png" class="police_tape"></img>
+    </div>  
 
 <!-- Bar chart- incidents per area -->
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 card text-center card-styling borough-incidents-barchart">
-          <h6>Incidents by Areas on London</h6>
+        <div class="col-12 card text-center card-styling area-incidents-barchart">
+          <h5>Incidents by Areas on London</h5>
           
           <div id="incidents_per_area"></div>
         </div>
@@ -120,7 +140,7 @@
 <!-- Row chart- vehicle types invloved -->    
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 card text-center vehicle-type-rowchart">
+        <div class="col-12 card text-center card-styling vehicle-type-rowchart">
           <h6>Row chart vehicles types involved</h6>
           
           <div id="vehicle_type"></div>
@@ -130,7 +150,7 @@
     
 <!-- Scatter chart- day of week and time incidents occur -->    
      <div class="container">
-      <div class="row justify-content-center vehicle-type-rowchart">
+      <div class="row justify-content-center ">
         <div class="col-12 card text-center">
           <h6>Scatter chart day of week and time of day </h6>
           

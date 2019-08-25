@@ -16,6 +16,8 @@ function makeGraphs(error, casualtyData) {
     show_incidents_per_area(ndx);
     // Row chart of vehicles involved
     show_vehicles_involved(ndx);
+    // Pie if casualities on each class
+    show_percentage_casualty_class(ndx);
     
     dc.renderAll();
 }    
@@ -59,15 +61,27 @@ function show_display_severity_percent(ndx, severity, element) {
 //  Pie chart to show males vs females casualties
 
 function show_percentage_male_female(ndx) {
+    var pieColours = d3.scale.ordinal()
+        .range(['#0666f9', '#113B92']);
+    
     var dim = ndx.dimension(dc.pluck('sex'))
     var group = dim.group();
     
     dc.pieChart("#male_female_casualties")
     .height(300) 
-    .radius(120)
+    .radius(140)
     .transitionDuration(500)
     .dimension(dim)
-    .group(group);
+    .group(group)
+    .colorAccessor(function(d) {
+            return d.key;
+        })
+    .colors(pieColours)
+    .on('pretransition', function(chart) {
+        chart.selectAll('text.pie-slice').text(function(d) {
+            return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+        });
+    });
 }
 
 //  Donut chart to show day of week most incidents occur
@@ -91,6 +105,32 @@ function show_day_of_week_most_incidents_occur(ndx) {
     //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
 }
 
+//  Pie chart showing percentage of casualties in each class
+function show_percentage_casualty_class(ndx) {
+    var pieColours = d3.scale.ordinal()
+        .range(['#0666f9', '#113B92', '#2070B0']);
+    
+    var dim = ndx.dimension(dc.pluck('casualty_class'))
+    var group = dim.group();
+    
+    dc.pieChart("#casualty_class_percentage")
+    .height(300) 
+    .radius(140)
+    .transitionDuration(500)
+    .dimension(dim)
+    .group(group)
+    .colorAccessor(function(d) {
+            return d.key;
+        })
+    .colors(pieColours)
+    .on('pretransition', function(chart) {
+        chart.selectAll('text.pie-slice').text(function(d) {
+            return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+        });
+    });
+}
+
+
 
 //  Bar chart to show number of incidents within bouroughs of London
 function show_incidents_per_area(ndx) {
@@ -100,7 +140,7 @@ function show_incidents_per_area(ndx) {
       dc.barChart("#incidents_per_area")
           .width(1100)
           .height(600)
-          .margins({top:30, right: 50, bottom: 80, left: 50})
+          .margins({top:30, right: 50, bottom: 150, left: 50})
           .dimension(dim)
           .group(group)
           .transitionDuration(500)
@@ -131,6 +171,21 @@ function show_vehicles_involved(ndx) {
         .group(group);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //  Pie chart of number of casualties in each age range
 function show_casualties_by_age(ndx) {
     var dim = ndx.dimension(dc.pluck('age'));
@@ -145,4 +200,12 @@ function show_casualties_by_age(ndx) {
         else if(v < 100) return '88-99';
         else return 'unknown';
     });
+    var group = dim.group(ageGroup);
+    
+    dc.pieChart("#casualties_age_range")
+        .height(300) 
+        .radius(140)
+        .transitionDuration(500)
+        .dimension(dim)
+        .group(group);
 }

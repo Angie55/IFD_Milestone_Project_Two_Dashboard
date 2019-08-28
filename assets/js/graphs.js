@@ -11,13 +11,12 @@ function makeGraphs(error, casualtyData) {
     show_display_severity_percent(ndx, "Fatal", "#percentage-incidents-fatal");
     // Pie and donut section
     show_percentage_male_female(ndx);
-    show_day_of_week_most_incidents_occur(ndx);
+    show_casualties_by_age(ndx);
+    show_percentage_casualty_class(ndx);
     // Bar chart of incidents by area
     show_incidents_per_area(ndx);
     // Row chart of vehicles involved
     show_vehicles_involved(ndx);
-    // Pie if casualities on each class
-    show_percentage_casualty_class(ndx);
     
     dc.renderAll();
 }    
@@ -86,27 +85,41 @@ function show_percentage_male_female(ndx) {
     
 }
 
-//  Donut chart to show day of week most incidents occur
-function show_day_of_week_most_incidents_occur(ndx) {
-    var dim = ndx.dimension(dc.pluck('day_of_week'))
-    var group = dim.group();
+//  Pie chart of number of casualties in each age range
+function show_casualties_by_age(ndx) {
     
-    dc.pieChart("#incidents_day_of_week")
-        .height(300) 
-        .radius(150)
-        .innerRadius(50)
-        .transitionDuration(500)
-        .useViewBoxResizing(true)
-        .dimension(dim)
-        .group(group)
-        //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
-        .on('pretransition', function(chart) {
-            chart.selectAll('text.pie-slice').text(function(d) {
-                return d.data.key + ': ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-            });
+        var ageDim = ndx.dimension(function(d) {
+        switch (true) {
+            case (d.age < 26):
+                return '13-25';
+            case (d.age < 39):
+                return '26-38';
+            case (d.age < 51):
+                return '39-50';
+            case (d.age < 64):
+                return '51-63';
+            case (d.age < 76):
+                return '64-75'; 
+            case (d.age < 88):
+                return '76-87';
+            case (d.age < 100):
+                return '88-99'; 
+            case (d.age == 'unknown'):
+                return 'unknown';    
+           }
         });
-        //  Code snippet copy and pasted from https://github.com/dc-js/dc.js/blob/master/web/examples/pie.html
+    
+    var ageGroup = ageDim.group();
+    
+    
+    dc.pieChart("#casualties_age_range")
+        .height(300) 
+        .radius(140)
+        .transitionDuration(500)
+        .dimension(ageDim)
+        .group(ageGroup);
 }
+
 
 //  Pie chart showing percentage of casualties in each class
 function show_percentage_casualty_class(ndx) {
@@ -176,40 +189,3 @@ function show_vehicles_involved(ndx) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  Pie chart of number of casualties in each age range
-function show_casualties_by_age(ndx) {
-    var dim = ndx.dimension(dc.pluck('age'));
-    var ageGroup = ageDim(function(v) {
-        if(v < 13) return '0-12';
-        else if(v < 26) return '13-25';
-        else if(v < 39) return '26-38';
-        else if(v < 51) return '39-50';
-        else if(v < 64) return '51-63';
-        else if(v < 76) return '64-75';
-        else if(v < 88) return '76-87';
-        else if(v < 100) return '88-99';
-        else return 'unknown';
-    });
-    var group = dim.group(ageGroup);
-    
-    dc.pieChart("#casualties_age_range")
-        .height(300) 
-        .radius(140)
-        .transitionDuration(500)
-        .dimension(dim)
-        .group(group);
-}

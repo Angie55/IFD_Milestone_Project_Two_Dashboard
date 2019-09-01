@@ -1,6 +1,7 @@
 body {
     background-image: url(../images/asphalt_background_dark1.png);
     font-family: 'Cabin', sans-serif;
+    padding-top: 55px;
 }
 
 h5 {

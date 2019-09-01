@@ -18,6 +18,8 @@ function makeGraphs(error, casualtyData) {
     // Row chart of vehicles involved
     show_vehicles_involved(ndx);
     
+    show_hours_per_day(ndx);
+    
     dc.renderAll();
 }    
 
@@ -188,4 +190,25 @@ function show_vehicles_involved(ndx) {
         .renderLabel(true);
 }
 
+
+//  Scatter chart
+function show_hours_per_day(ndx) {
+    
+    var hourDim = ndx.dimension(dc.pluck('hour_of_day'));
+    
+    var dayHourGroup = hourDim.group();
+    
+    
+    dc.scatterPlot('#hour_scatter_plot')
+              .width(800)
+              .height(500)
+              .x(d3.scale.ordinal())
+              .brushOn(false)
+              .symbolSize(8)
+              .clipPadding(10)
+              .yAxisLabel('Hour of day')
+              .dimension(hourDim)
+              .group(dayHourGroup)
+              .margins({top: 10, right: 50, bottom: 75, left: 75 });
+}
 

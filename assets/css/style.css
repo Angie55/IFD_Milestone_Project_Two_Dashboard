@@ -96,6 +96,9 @@ nav img {
     padding-top: 10px;
 }
 
+.age_donut label {
+   color: red;
+}
 /*--------------------------------- Bar chart- Incidents by area section*/
 
 .area-incidents-barchart {

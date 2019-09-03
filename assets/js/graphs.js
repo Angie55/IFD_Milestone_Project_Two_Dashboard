@@ -208,6 +208,9 @@ function show_line_chart(ndx) {
        
        var hour_dim = ndx.dimension(dc.pluck('hour_of_day'));
        
+       var minHour = hour_dim.bottom(1)[0].hour_of_day;
+       var maxHour = hour_dim.top(1)[0].hour_of_day;
+       
        var mondayIncidents = hour_dim.group().reduceSum(function (d) {
                 if (d.day_of_week === 'Monday') {
                     return +d.hour_of_day;
@@ -221,15 +224,23 @@ function show_line_chart(ndx) {
                 } else {
                     return 0;
                 }
+            });
+        var wednesdayIncidents = hour_dim.group().reduceSum(function (d) {
+                if (d.day_of_week === 'Wednesday') {
+                    return +d.hour_of_day;
+                } else {
+                    return 0;
+                }
             });    
     
     
         var compositeChart = dc.compositeChart('#comp_chart');
         compositeChart
-            .width(990)
-            .height(200)
+            .width(1500)
+            .height(600)
+            .useViewBoxResizing(true)
             .dimension(hour_dim)
-            .x(d3.scale.ordinal())
+            .x(d3.time.scale().domain([minHour, maxHour]))
             .yAxisLabel("No of incidents")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
@@ -240,7 +251,9 @@ function show_line_chart(ndx) {
                 dc.lineChart(compositeChart)
                     .colors('red')
                     .group(tuesdayIncidents, 'Tuesday'),
-                
+                dc.lineChart(compositeChart)
+                    .colors('blue')
+                    .group(wednesdayIncidents, 'Wednesday'),
             ])
             .brushOn(false)
             .render();

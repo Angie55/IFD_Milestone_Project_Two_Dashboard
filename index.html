@@ -22,6 +22,8 @@
     <script type="text/javascript" src="assets/js/dc.min.js"></script>
     <script type="text/javascript" src="assets/js/queue.min.js"></script>
     <script type="text/javascript" src="assets/js/graphs.js"></script>
+    <!-- JS Helper Click Popup -->
+    <!-- <script type="text/javascript" src="assets/js/helper_click_popup.js"></script> -->
 </head>
 
 
@@ -37,12 +39,20 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link nav-link-colour" href="#">Help</a>
+            <a class="help_trigger">Help</a>
+            <div class="help_bkgrd_cover">
+                <span class="verticle_centre_popup"></span>
+              <div>
+                <p>Add any HTML content<br />inside the popup box!</p>
+                <div class="help_popup_close">Close</div>
+              </div>
+           </div>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-link-colour" href="#">Reset</a>
           </li>
         </ul>  
+      </div>  
     </nav>
     
 <!-- Header -->      
@@ -162,24 +172,14 @@
       </div>
     </div> 
     
-<!-- Scatter chart- day of week and time incidents occur -->    
-     <div class="container">
-      <div class="row justify-content-center ">
-        <div class="col-12 card text-center card-styling vehicle-type-rowchart">
-          <h6>Scatter chart day of week and time of day </h6>
-          
-          <div id="hour_scatter_plot"></div>
-        </div>
-      </div>
-    </div>
     
-<!-- Line chart- casualty class per year -->     
+<!-- Line chart -->     
     <div class="container">
      <div class="row justify-content-center vehicle-type-rowchart">
         <div class="col-12 card text-center ">
           <h6>Line Chart </h6>
           
-          <div id=""></div>
+          <div id="comp_chart"></div>
         </div>
       </div>
     </div>

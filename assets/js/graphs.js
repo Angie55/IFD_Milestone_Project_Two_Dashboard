@@ -6,6 +6,11 @@
 function makeGraphs(error, casualtyData) {
     var ndx = crossfilter(casualtyData);
     
+    var parseDate = d3.time.format("%d/m%/%Y").parse;
+        casualtyData.forEach(function(d){
+            d.date = parseDate(d.date);
+        });
+    
     // Top section number displays
     show_display_severity_percent(ndx, "Serious", "#percentage-incidents-serious");
     show_display_severity_percent(ndx, "Fatal", "#percentage-incidents-fatal");
@@ -18,9 +23,10 @@ function makeGraphs(error, casualtyData) {
     // Row chart of vehicles involved
     show_vehicles_involved(ndx);
     
-    show_hours_per_day(ndx);
+    show_line_chart(ndx);
     
     dc.renderAll();
+    
 }    
 
 //  Top section number dispalys - One set of code for both seperate % severity displays
@@ -198,25 +204,46 @@ function show_vehicles_involved(ndx) {
         .renderLabel(true);
 }
 
-
-//  Scatter chart
-function show_hours_per_day(ndx) {
+function show_line_chart(ndx) {
+       
+       var hour_dim = ndx.dimension(dc.pluck('hour_of_day'));
+       
+       var mondayIncidents = hour_dim.group().reduceSum(function (d) {
+                if (d.day_of_week === 'Monday') {
+                    return +d.hour_of_day;
+                } else {
+                    return 0;
+                }
+            });
+        var tuesdayIncidents = hour_dim.group().reduceSum(function (d) {
+                if (d.day_of_week === 'Tuesday') {
+                    return +d.hour_of_day;
+                } else {
+                    return 0;
+                }
+            });    
     
-    var hourDim = ndx.dimension(dc.pluck('hour_of_day'));
     
-    var dayHourGroup = hourDim.group();
-    
-    
-    dc.scatterPlot('#hour_scatter_plot')
-              .width(800)
-              .height(500)
-              .x(d3.scale.ordinal())
-              .brushOn(false)
-              .symbolSize(8)
-              .clipPadding(10)
-              .yAxisLabel('Hour of day')
-              .dimension(hourDim)
-              .group(dayHourGroup)
-              .margins({top: 10, right: 50, bottom: 75, left: 75 });
-}
+        var compositeChart = dc.compositeChart('#comp_chart');
+        compositeChart
+            .width(990)
+            .height(200)
+            .dimension(hour_dim)
+            .x(d3.scale.ordinal())
+            .yAxisLabel("No of incidents")
+            .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+            .renderHorizontalGridLines(true)
+            .compose([
+                dc.lineChart(compositeChart)
+                    .colors('green')
+                    .group(mondayIncidents, 'Monday'),
+                dc.lineChart(compositeChart)
+                    .colors('red')
+                    .group(tuesdayIncidents, 'Tuesday'),
+                
+            ])
+            .brushOn(false)
+            .render();
+        
+    }
 

@@ -38,63 +38,67 @@ nav img {
 
 /*--------------------------------- Help -click to pop up*/
 
-.help_bkgrd_cover{
-    background:rgba(0,0,0,.4);
-    cursor:pointer;
-    display:none;
-    height:100%;
-    position:fixed;
-    text-align:center;
-    top:0;
-    width:100%;
-    z-index:10000;
-}
-.help_bkgrd_cover .verticle_centre_popup{
-    display:inline-block;
-    height:100%;
-    vertical-align:middle;
-}
-.help_bkgrd_cover > div {
-    background-color: #fff;
-    box-shadow: 10px 10px 60px #555;
-    display: inline-block;
-    height: auto;
-    max-width: 551px;
-    min-height: 100px;
-    vertical-align: middle;
-    width: 60%;
-    position: relative;
-    border-radius: 8px;
-    padding: 15px 5%;
-}
-.help_popup_close {
-    background-color: #fff;
-    border: 3px solid #999;
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    font-family: arial;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    font-size: 25px;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
-.help_popup_close:hover {
-    background-color: #ccc;
-}
-.help_trigger {
-    cursor: pointer;
-    font-size: 20px;
-    margin: 20px;
-    display: inline-block;
-    font-weight: bold;
+.help-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+/* Modal Content/Box */
+.help-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  position: relative;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+
+
+/* The Close Button */
+.help_close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Modal Header */
+.help-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+  
+}
+
+/* Modal Body */
+.help-body {padding: 2px 16px;}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
 /*--------------------------------- Header*/
 
 /*--------------------------------- Divider*/

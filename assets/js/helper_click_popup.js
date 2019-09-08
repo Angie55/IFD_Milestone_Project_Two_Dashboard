@@ -1,11 +1,29 @@
-$(window).load(function () {
-    $(".help_trigger").click(function(){
-       $('.help_bkgrd_cover').show();
-    });
-    $('.help_bkgrd_cover').click(function(){
-        $('.help_bkgrd_cover').hide();
-    });
-    $('.help_popup_close').click(function(){
-        $('.help_bkgrd_cover').hide();
-    });
-});
+// Get the modal
+window.onload = function(){ 
+    // your code 
+
+var modal = document.getElementById("helpModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("helpBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("help_close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+};

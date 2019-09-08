@@ -231,8 +231,35 @@ function show_line_chart(ndx) {
                 } else {
                     return 0;
                 }
-            });    
-    
+            });
+        var thursdayIncidents = hour_dim.group().reduceSum(function (d) {
+                if (d.day_of_week === 'Thursday') {
+                    return +d.hour_of_day;
+                } else {
+                    return 0;
+                }
+            }); 
+        var fridayIncidents = hour_dim.group().reduceSum(function (d) {
+                if (d.day_of_week === 'Friday') {
+                    return +d.hour_of_day;
+                } else {
+                    return 0;
+                }
+            }); 
+        var saturdayIncidents = hour_dim.group().reduceSum(function (d) {
+                if (d.day_of_week === 'Saturday') {
+                    return +d.hour_of_day;
+                } else {
+                    return 0;
+                }
+            }); 
+        var sundayIncidents = hour_dim.group().reduceSum(function (d) {
+                if (d.day_of_week === 'Sunday') {
+                    return +d.hour_of_day;
+                } else {
+                    return 0;
+                }
+            });
     
         var compositeChart = dc.compositeChart('#comp_chart');
         compositeChart
@@ -254,6 +281,18 @@ function show_line_chart(ndx) {
                 dc.lineChart(compositeChart)
                     .colors('blue')
                     .group(wednesdayIncidents, 'Wednesday'),
+                dc.lineChart(compositeChart)
+                    .colors('yellow')
+                    .group(thursdayIncidents, 'Thursday'),
+                dc.lineChart(compositeChart)
+                    .colors('purple')
+                    .group(fridayIncidents, 'Friday'), 
+                dc.lineChart(compositeChart)
+                    .colors('black')
+                    .group(saturdayIncidents, 'Saturday'), 
+                dc.lineChart(compositeChart)
+                    .colors('#113B92')
+                    .group(sundayIncidents, 'Sunday'),    
             ])
             .brushOn(false)
             .render();

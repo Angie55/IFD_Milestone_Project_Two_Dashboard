@@ -1,14 +1,13 @@
 body {
     background-image: url(../images/asphalt_background_dark1.png);
     font-family: 'Cabin', sans-serif;
-    padding-top: 55px;
 }
 
-h2, .nav-link{
+h2, .nav-btn{
     font-family: 'Hammersmith One' , sans-serif;
 }
 
-h5 {
+h5, nav a {
   padding-top: 20px;  
   font-family: 'Hammersmith One' , sans-serif;
 }
@@ -27,26 +26,45 @@ a:hover {
 }
 
 /*--------------------------------- Main Navigation*/
-
-.navbar-colour {
+nav {
+    height: 50px;
     background-color: rgba(45, 48, 57, 0.8);
+    
+}
+
+.logo-container {
+    padding-top:10px;
+    margin-left: 10px;
+    display:inline-block;
+    font-size: 1.2em;
+    
 }
 
 .logo {
     color: #EEEEEE;
 }
 
-.nav-link {
-    margin-right: 60px;
+.nav-buttons {
+    float: right;
+    padding-top: 10px;
+    margin-right: 30px;
+   
+}
+
+.nav-btn {
     color: #2D3039;
     background-color: #EEEEEE;
     border-radius: 5px;
     box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.80);
-    width: 60%;
+    width: 100px;
+}
+
+.help-btn {
+    margin-right: 30px;
     
 }
 
-.nav-link:hover {
+.nav-btn:hover {
     color: #EEEEEE;
     background-color: #113B92;
     transition:all 0.100 ease-in-out;
@@ -225,4 +243,3 @@ footer {
 
 
 /*--------------------------------- Media queries*/
-

@@ -31,17 +31,18 @@
 <body>
   
 <!-- Navigation -->    
-    <nav class="navbar fixed-top navbar-expand-lg navbar-colour">
-      <a class="navbar-brand logo" href="#">
-        <img src="assets/images/logo_image.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        London Road Casualties 2010-2014
-      </a>
+    <nav>
+      <div class="logo-container">
+        <a class="logo" href="#">
+          <img src="assets/images/logo_image.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          London Road Casualties 2010-2014
+        </a>
+      </div>
       
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <button id="helpBtn" class="nav-link help-btn">Help</button>
-          </li>
+      <div class="nav-buttons">
+        
+        <button id="helpBtn" class="nav-btn help-btn">Help</button>
+         
           <div id="helpModal" class="help-modal">
             <div class="help-content card-styling">
               <div class="help-header">
@@ -69,11 +70,11 @@
               </div>
             </div>
           </div>
-          <li class="nav-item">
-            <button class="nav-link">Reset</button>
-          </li>
-        </ul>  
-      </div>
+          
+          <button class="nav-btn">Reset</button>
+          
+         
+      </div> 
       
     </nav>
     

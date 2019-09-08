@@ -4,16 +4,29 @@ body {
     padding-top: 55px;
 }
 
-h5 {
+h5, h2 {
     font-family: 'Hammersmith One' , sans-serif;
     padding-top: 20px;
+}
+
+a {
+    color: #0666f9;
+}
+
+a:hover {
+  color: #CBCBCB;  
+  text-decoration: none;
+  transition:all 0.100 ease-in-out;
+    -moz-transition:all 0.100 ease-in-out;
+    -webkit-transition:all 0.100 ease-in-out;
+    -o-transition:all 0.100 ease-in-out;
 }
 
 
 /*--------------------------------- Main Navigation*/
 
 .navbar-colour {
-    background-color: rgba(45, 48, 57, 0.7);
+    background-color: rgba(45, 48, 57, 0.8);
 }
 
 .logo {
@@ -42,62 +55,68 @@ nav img {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
+  text-align: center;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .help-content {
-  background-color: #fefefe;
+  
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   position: relative;
-  border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s
 }
 
-
-
 /* The Close Button */
 .help_close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  color: #2D3039;
+  position: absolute;
+  top: 0px;
+  left: 95%;
+  font-size: 2.5em;
+  padding-top: 10px;
 }
 
 /* Modal Header */
 .help-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-  
+  padding-bottom: 10px;
+  color: #2D3039;
 }
 
 /* Modal Body */
-.help-body {padding: 2px 16px;}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.help-body {
+    padding: 5px 16px;
+    
 }
 
-
+.help_close:hover,
+.help_close:focus {
+  color: #CBCBCB;
+  cursor: pointer;
+  transition:all 0.100 ease-in-out;
+    -moz-transition:all 0.100 ease-in-out;
+    -webkit-transition:all 0.100 ease-in-out;
+    -o-transition:all 0.100 ease-in-out;
+}
 
 /* Add Animation */
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
+}
+
+hr {
+    background-color: #EEEEEE;
+    max-width: 80%;
 }
 /*--------------------------------- Header*/
 

@@ -1,9 +1,11 @@
 body {
     background-image: url(../images/asphalt_background_dark1.png);
     font-family: 'Cabin', sans-serif;
+    padding-top: 50px;
+    
 }
 
-h2, .nav-btn{
+h3, h2, .nav-btn{
     font-family: 'Hammersmith One' , sans-serif;
 }
 
@@ -29,6 +31,10 @@ a:hover {
 nav {
     height: 50px;
     background-color: rgba(45, 48, 57, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
     
 }
 
@@ -52,7 +58,7 @@ nav {
 }
 
 .nav-btn {
-    color: #2D3039;
+    color: #113B92;
     background-color: #EEEEEE;
     border-radius: 5px;
     box-shadow: 4px 4px 1px 0px rgba(0,0,0,0.80);
@@ -142,6 +148,11 @@ hr {
     max-width: 80%;
 }
 /*--------------------------------- Header*/
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
 
 /*--------------------------------- Divider*/
 
@@ -243,3 +254,12 @@ footer {
 
 
 /*--------------------------------- Media queries*/
+
+@media (max-width:767px){
+    .title-header {
+        display: none;
+    }
+    .nav-btn {
+        width: 70px;
+    }
+}

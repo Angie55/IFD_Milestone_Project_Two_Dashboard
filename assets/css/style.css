@@ -14,6 +14,7 @@ h5, nav a {
   font-family: 'Hammersmith One' , sans-serif;
 }
 
+
 a {
     color: #0666f9;
 }
@@ -180,6 +181,21 @@ hr {
     box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.80);
 }
 
+.chart-title {
+    padding-top:25px;
+    padding-bottom: 10px;
+}
+
+.chart-intro{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.chart-info{
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
 /*--------------------------------- Intro section*/
 .intro {
     padding: 10px;
@@ -194,16 +210,21 @@ hr {
 /*--------------------------------- Top section stats -number displays*/
 
 .top-stats {
-    padding-bottom: 30px;
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
+}
+
+.top-stats p {
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .num-display {
     font-size: 3em;
     color: #0666f9;
     padding-top: 20px;
+    padding-bottom: 25px;
 }
 
 .top-stats-icon {
@@ -218,12 +239,9 @@ hr {
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
-    
 }
 
-.pie-donut-section p {
-    padding-top: 10px;
-}
+
 
 /*--------------------------------- Bar chart- Incidents by area section*/
 

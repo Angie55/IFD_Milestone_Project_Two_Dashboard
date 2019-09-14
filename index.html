@@ -86,10 +86,10 @@
     
 <!-- Introduction -->     
     <section> 
-      <div class=" container-fluid">
+      <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-10 card text-center card-styling intro">
-            <h3>London Road Casualties 2010-2014</h3>
+            <h3 class="intro-header">London Road Casualties 2010-2014</h3>
             <p> This dashboard displays a data set of casualties on the roads of London between 2010-2014. The data includes all age groups and both
             severe and fatal incidents. This set of charts and data will help give you an idea of the safest areas on London to be on the road or a pedestrians.
             It will give you an idea of areas to avoid at what time.
@@ -99,13 +99,9 @@
       </div>
     </section>  
     
-<!-- Police tape seperater-->     
-    <div class="container-fluid justify-content-center">
-      <img src="assets/images/police_tape.png" class="police_tape"></img>
-    </div> 
-    
+
 <!-- Top section stats -number displays-->   
-    <section>
+    <section class="section-spacing">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
@@ -131,16 +127,13 @@
       </div>
     </section>
     
-<!-- Police tape seperater-->     
-    <div class="container-fluid justify-content-center">
-      <img src="assets/images/police_tape.png" class="police_tape"></img>
-    </div>  
+
     
     
 <!-- Graphs -->  
 
 <!-- Pie and donut section -->
-    <section>
+    <section class="section-spacing">
       <div class="container-fluid">
         <div class="row justify-content-center">
           
@@ -171,71 +164,70 @@
       </div>
     </section>
     
-<!-- Police tape seperater-->     
-    <div class="container-fluid justify-content-center">
-      <img src="assets/images/police_tape.png" class="police_tape"></img>
-    </div>  
+ 
 
 <!-- Bar chart- incidents per area -->
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-10 card text-center card-styling area-incidents-barchart">
-          <h5 class="chart-title">Number of incidents per areas of London</h5>
-          <p class="chart-intro">This chart will give you an idea of what areas have the most incidents. You can click on the individual bars for a certain area 
-          to filter the other charts show details for just that area.</p>
-          <div id="incidents_per_area" class="incidents_per_area_style"></div>
-          <p class="chart-info">Westminster and lambeth are quite risky areas perhaps due to the fact that they have a high tourist foot fall as
-          well has many businesses and offices. Many central areas are very busy most of the day and with so many pedestrians, cyclists and general
-          road users trying to get somewhere, often in a hurry it is no surprise accidents will happen.</p>
+    <section class="section-spacing">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-10 card text-center card-styling area-incidents-barchart">
+            <h5 class="chart-title">Number of incidents per areas of London</h5>
+            <p class="chart-intro">This chart will give you an idea of what areas have the most incidents. You can click on the individual bars for a certain area 
+            to filter the other charts show details for just that area.</p>
+            <div id="incidents_per_area" class="incidents_per_area_style"></div>
+            <p class="chart-info">Westminster and lambeth are quite risky areas perhaps due to the fact that they have a high tourist foot fall as
+            well has many businesses and offices. Many central areas are very busy most of the day and with so many pedestrians, cyclists and general
+            road users trying to get somewhere, often in a hurry it is no surprise accidents will happen.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+   
     
-<!-- Police tape seperater-->     
-    <div class="container-fluid justify-content-center">
-      <img src="assets/images/police_tape.png" class="police_tape"></img>
-    </div>    
+<!-- Row chart- vehicle types invloved --> 
+    <section class="section-spacing">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-10 card text-center card-styling vehicle-type-rowchart">
+            <h5 class="chart-title">Row chart of vehicles types involved in incidents</h5>
+             <p class="chart-intro">Check if your choice of transport is a risky one with this chart. You can also see which to look out for, certain methods of travel are more 
+             vunerable than others. All vehicles need to keep an eye out for pedestrians, pedal bike and moter bikes weaving through traffic. Some vehicles are split 
+             by age such as car (from 2005) is cars made after 2005.</p>
+            <div id="vehicle_type" class="row-chart"></div>
+            <p class="chart-info" >Cars are by far the vehicle mst likely to be involved in an incident. However pedal cycles is the most likly to be involved in an incident in quite a few 
+            different area of London. Collectivly the various sized motorcyles are another vehicle that is likely to be involved in an accident </p>
+          </div>
+        </div>
+      </div> 
+    </section>
     
-<!-- Row chart- vehicle types invloved -->    
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-10 card text-center card-styling vehicle-type-rowchart">
-          <h5 class="chart-title">Row chart of vehicles types involved in incidents</h5>
-           <p class="chart-intro">Check if your choice of transport is a risky one with this chart. You can also see which to look out for, certain methods of travel are more 
-           vunerable than others. All vehicles need to keep an eye out for pedestrians, pedal bike and moter bikes weaving through traffic. Some vehicles are split 
-           by age such as car (from 2005) is cars made after 2005.</p>
-          <div id="vehicle_type" class="row-chart"></div>
-          <p class="chart-info" >Cars are by far the vehicle mst likely to be involved in an incident. However pedal cycles is the most likly to be involved in an incident in quite a few 
-          different area of London. Collectivly the various sized motorcyles are another vehicle that is likely to be involved in an accident </p>
+    
+    
+<!-- Line chart -->  
+    <section class="section-spacing"> 
+      <div class="container-fluid">
+       <div class="row justify-content-center">
+          <div class="col-10 card text-center card-styling vehicle-type-rowchart">
+            <h5 class="chart-title">Composite line chart of the time of day incidents occur</h5>
+            <p class="chart-intro">This chart will give you an insight of what time of the day an accident os most likely to happen. Hover over each day of the week in the key to focus on the
+            line for that particular day. Also hover over the lines to see the number of incidents that occured at that time.</p>
+            <div id="comp_chart"></div>
+            <p class="chart-info">As you would expect there is a spike in incidents occur during the evening rush hours Monday to Friday as many people are trying to get home. There is a small spike during the 
+            morning rush too but the streets and roads get much more congested throughout the day. </p>
+          </div>
         </div>
       </div>
-    </div> 
-    
-<!-- Police tape seperater-->     
-    <div class="container-fluid justify-content-center">
-      <img src="assets/images/police_tape.png" class="police_tape"></img>
-    </div>     
-    
-<!-- Line chart -->     
-    <div class="container-fluid">
-     <div class="row justify-content-center">
-        <div class="col-10 card text-center card-styling vehicle-type-rowchart">
-          <h5 class="chart-title">Composite line chart of the time of day incidents occur</h5>
-          <p class="chart-intro">This chart will give you an insight of what time of the day an accident os most likely to happen. Hover over each day of the week in the key to focus on the
-          line for that particular day. Also hover over the lines to see the number of incidents that occured at that time.</p>
-          <div id="comp_chart"></div>
-          <p class="chart-info">As you would expect there is a spike in incidents occur during the evening rush hours Monday to Friday as many people are trying to get home. There is a small spike during the 
-          morning rush too but the streets and roads get much more congested throughout the day. </p>
-        </div>
-      </div>
-    </div>
+    </section>
    
     
 <!-- Footer -->
     <footer class="container-fluid">
-         <div class="github-link">
-            <a href="https://github.com/Angie55" target="_blank"><i class="fab fa-github-square"></i></a>
-        </div>
+      <div>
+      <div class="disclaimer">This website was created for educational purposes</div>
+      <div class="github-link">
+        <a href="https://github.com/Angie55" target="_blank"><i class="fab fa-github-square"></i></a>
+      </div>
+      </div>
     </footer>
     
 </body>

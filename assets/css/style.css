@@ -20,12 +20,12 @@ a {
 }
 
 a:hover {
-  color: #CBCBCB;  
+  color: #113B92;  
   text-decoration: none;
-  transition:all 0.100 ease-in-out;
-    -moz-transition:all 0.100 ease-in-out;
-    -webkit-transition:all 0.100 ease-in-out;
-    -o-transition:all 0.100 ease-in-out;
+  transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -webkit-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
 }
 
 .dc-chart g.row text {
@@ -48,7 +48,7 @@ nav {
 .logo-container {
     padding-top:10px;
     margin-left: 10px;
-    display:inline-block;
+    display: inline-block;
     font-size: 1.2em;
     
 }
@@ -80,10 +80,10 @@ nav {
 .nav-btn:hover {
     color: #EEEEEE;
     background-color: #113B92;
-    transition:all 0.100 ease-in-out;
-    -moz-transition:all 0.100 ease-in-out;
-    -webkit-transition:all 0.100 ease-in-out;
-    -o-transition:all 0.100 ease-in-out;
+    transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -webkit-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
 }
 
 nav img {
@@ -161,18 +161,12 @@ hr {
     height: auto;
 }
 
-/*--------------------------------- Divider*/
-
-.police_tape {
-    display: block;
-    margin: 60px auto 40px;
-    height: 20px;
-    opacity: 0.8;
-    border-radius: 5px;
-    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.80);
-}
 
 /*--------------------------------- Chart/info card background styling*/
+
+.section-spacing {
+    margin-top: 50px;
+}
 
 .card-styling {
     background-color: #EEEEEE;
@@ -202,7 +196,7 @@ hr {
     margin-top: 50px;
 }
 
-.intro h3 {
+.intro-header {
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -263,20 +257,42 @@ hr {
 /*--------------------------------- Footer*/
 
 footer {
-    background-color: #2D3039;
+    background-color: rgba(45, 48, 57, 0.8);
     height: 50px;
     margin-top: 50px;
+    text-align: center;
+    position: relative;
 }
 
 .github-link {
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 15px;
+    color: #EEEEEE;
+    padding-top: 10px;
+    display: inline-block;
 }
 
-.github-link li a i {
-    font-size: 20px;
+.github-link a i {
+    font-size: 32px;
+    color: #EEEEEE;
 }
+
+.github-link a i:hover {
+    color: #113B92;
+    transition:all 0.25s ease-in-out;
+      -moz-transition:all 0.25s ease-in-out;
+      -webkit-transition:all 0.25s ease-in-out;
+      -o-transition:all 0.25s ease-in-out;
+}
+
+.disclaimer {
+    color: #EEEEEE;
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 10px;
+    
+}
+
+
+
 
 
 /*--------------------------------- Media queries*/
@@ -288,4 +304,11 @@ footer {
     .nav-btn {
         width: 70px;
     }
+}
+
+@media (max-width:1025px){
+    .disclaimer {
+        display: none;
+    }
+    
 }

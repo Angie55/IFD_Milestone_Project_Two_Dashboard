@@ -69,7 +69,7 @@ function show_display_severity_percent(ndx, severity, element) {
 
 function show_percentage_male_female(ndx) {
     var pieColours = d3.scale.ordinal()
-        .range([ '#113B92', '#0666f9']);
+        .range([ '#113B92', '#0a5de0']);
     
     var dim = ndx.dimension(dc.pluck('sex'))
     var group = dim.group();
@@ -97,7 +97,7 @@ function show_percentage_male_female(ndx) {
 function show_casualties_by_age(ndx) {
     
         var pieColours = d3.scale.ordinal()
-        .range([ '#CBCBCB', '#B3DAF1', '#84A5B8', '#2070B0', '#113B92', '#0666f9' ]);
+        .range([ '#CBCBCB', '#B3DAF1', '#84A5B8', '#2070B0', '#113B92', '#0a5de0' ]);
     
         var ageDim = ndx.dimension(function(d) {
         switch (true) {
@@ -120,14 +120,14 @@ function show_casualties_by_age(ndx) {
     
     
     dc.pieChart("#casualties_age_range")
-        .height(400) 
+        .height(350) 
         .radius(140)
         .transitionDuration(500)
         .useViewBoxResizing(true)
         .innerRadius(50)
         .dimension(ageDim)
         .group(ageGroup)
-        .externalLabels(30)
+        .externalLabels(25)
         .drawPaths(true)
         .colors(pieColours)
         .on('pretransition', function(chart) {
@@ -141,7 +141,7 @@ function show_casualties_by_age(ndx) {
 //  Pie chart showing percentage of casualties in each class
 function show_percentage_casualty_class(ndx) {
     var pieColours = d3.scale.ordinal()
-        .range(['#0666f9', '#113B92', '#2070B0']);
+        .range(['#0a5de0', '#113B92', '#2070B0']);
     
     var dim = ndx.dimension(dc.pluck('casualty_class'))
     var group = dim.group();
@@ -177,7 +177,7 @@ function show_incidents_per_area(ndx) {
       dc.barChart("#incidents_per_area")
           .width(1500)
           .height(800)
-          .margins({top:30, right: 60, bottom: 130, left: 50})
+          .margins({top:30, right: 60, bottom: 120, left: 50})
           .useViewBoxResizing(true) 
           .dimension(dim)
           .group(group)
@@ -195,27 +195,7 @@ function show_incidents_per_area(ndx) {
           .yAxis().ticks(30);
 }
 
-//  Row chart of vehicles involved
-function show_vehicles_involved(ndx) {
-    var rowColours = d3.scale.ordinal()
-        .range(['#CBCBCB', '#B3DAF1', '#84A5B8']);
-        
-    var dim = ndx.dimension(dc.pluck('vehicle_type'));
-    var group = dim.group();
-    
-    dc.rowChart('#vehicle_type') 
-        .width(1500)
-        .height(700)
-        .useViewBoxResizing(true)
-        .x(d3.scale.ordinal())
-        .elasticX(true)
-        .cap(15)
-        .colors(rowColours)
-        .dimension(dim)
-        .group(group)
-        .renderLabel(true)
-        
-}
+//  Composite line chart of hour of day incidents occur
 
 function show_line_chart(ndx) {
        
@@ -278,15 +258,17 @@ function show_line_chart(ndx) {
         compositeChart
             .width(1500)
             .height(600)
+            .margins({top:30, right: 80, bottom: 50, left: 50})
             .useViewBoxResizing(true)
             .dimension(hour_dim)
             .x(d3.time.scale().domain([minHour, maxHour]))
             .yAxisLabel("No of incidents")
+            .xAxisLabel("Hour of the day")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
             .compose([
                 dc.lineChart(compositeChart)
-                    .colors('#0666f9')
+                    .colors('#0a5de0')
                     .group(mondayIncidents, 'Monday'),
                 dc.lineChart(compositeChart)
                     .colors('#113B92')
@@ -295,16 +277,16 @@ function show_line_chart(ndx) {
                     .colors('#6A7275')
                     .group(wednesdayIncidents, 'Wednesday'),
                 dc.lineChart(compositeChart)
-                    .colors('#CBCBCB')
+                    .colors('#fb040f')
                     .group(thursdayIncidents, 'Thursday'),
                 dc.lineChart(compositeChart)
-                    .colors('#B3DAF1')
+                    .colors('#f8b104')
                     .group(fridayIncidents, 'Friday'), 
                 dc.lineChart(compositeChart)
-                    .colors('black')
+                    .colors('#33a532')
                     .group(saturdayIncidents, 'Saturday'), 
                 dc.lineChart(compositeChart)
-                    .colors('#84A5B8')
+                    .colors('black')
                     .group(sundayIncidents, 'Sunday'),    
             ])
             .brushOn(false)
@@ -312,3 +294,24 @@ function show_line_chart(ndx) {
         
     }
 
+//  Row chart of vehicles involved
+function show_vehicles_involved(ndx) {
+    var rowColours = d3.scale.ordinal()
+        .range(['#CBCBCB', '#B3DAF1', '#84A5B8']);
+        
+    var dim = ndx.dimension(dc.pluck('vehicle_type'));
+    var group = dim.group();
+    
+    dc.rowChart('#vehicle_type') 
+        .width(1500)
+        .height(700)
+        .useViewBoxResizing(true)
+        .x(d3.scale.ordinal())
+        .elasticX(true)
+        .cap(15)
+        .colors(rowColours)
+        .dimension(dim)
+        .group(group)
+        .renderLabel(true)
+        
+}

@@ -31,8 +31,6 @@ h5, nav a {
     fill: black;
 }
 
-
-
 /*--------------------------------- Main Navigation*/
 nav {
     height: 50px;
@@ -95,7 +93,6 @@ nav img {
 }
 
 
-
 /*--------------------------------- Help -click to pop up*/
 
 .help-modal {
@@ -131,6 +128,7 @@ nav img {
 }
 
 .help-header {
+  margin-top: 10px;
   padding-bottom: 10px;
   color: #2D3039;
 }
@@ -165,8 +163,19 @@ hr {
     height: auto;
 }
 
+/*--------------------------------- Intro section*/
+.intro {
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
-/*--------------------------------- Chart/info card background styling*/
+.intro-header {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/*--------------------------------- General chart sections styling*/
 
 .section-spacing {
     margin-top: 50px;
@@ -185,32 +194,20 @@ hr {
 }
 
 .chart-intro{
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 10px 40px 30px;
 }
 
 .chart-info{
-    padding-top: 25px;
-    padding-bottom: 10px;
+    padding: 45px 40px 20px;
 }
 
-/*--------------------------------- Intro section*/
-.intro {
-    padding: 10px;
-    margin-top: 50px;
-}
-
-.intro-header {
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
 
 /*--------------------------------- Top section stats -number displays*/
 
 .top-stats {
-    margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
+    margin-bottom: 50px;
 }
 
 .top-stats p {
@@ -220,7 +217,7 @@ hr {
 
 .num-display {
     font-size: 3em;
-    color: #0666f9;
+    color: #0a5de0;
     padding-top: 20px;
     padding-bottom: 25px;
 }
@@ -228,28 +225,21 @@ hr {
 .top-stats-icon {
     padding-right: 50px;
     font-size: 1.2em;
-    color: #0666f9;
+    color: #0a5de0;
 }
 
-/*--------------------------------- Pies and donut section */
-
+/*--------------------------------- Pie and donut section */
 .pie-donut-section {
-    margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
+    margin-bottom: 50px;
 }
 
-
-
-/*--------------------------------- Bar chart- Incidents by area section*/
-
-.area-incidents-barchart {
-    margin-top: 50px;
+.pie-info {
+    padding: 25px 20px 5px;
 }
 
-.vehicle-type-rowchart {
-    margin-top: 50px;
-}
+/*--------------------------------- Bar charts of incidents per area */
 
 .incidents_per_area_style .axis.x text {
     -webkit-transform: rotate(-45deg);
@@ -258,6 +248,7 @@ hr {
   font-size: 0.7rem;
 }
 
+/*--------------------------------- Back to top link*/
 
 .back-to-top-link {
     margin-top: 50px;
@@ -328,5 +319,10 @@ footer {
     .disclaimer {
         display: none;
     }
-    
+    .chart-intro{
+    padding: 10px 15px 20px;
+    }
+   .chart-info{
+    padding: 35px 15px 20px;
+    }
 }

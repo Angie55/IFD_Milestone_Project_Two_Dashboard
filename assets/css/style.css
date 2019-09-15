@@ -172,13 +172,14 @@ hr {
 
 .intro-header {
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
+
 
 /*--------------------------------- General chart sections styling*/
 
 .section-spacing {
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .card-styling {

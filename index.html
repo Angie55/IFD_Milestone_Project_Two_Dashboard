@@ -28,13 +28,13 @@
 </head>
 
 
-<body>
+<body id="top-of-page">
   
 <!-- Navigation -->    
     <nav>
       <div class="logo-container">
           <img src="assets/images/logo_image.png" width="30" height="30" class="logo" alt="">
-        <a class="title-header logo" href="#">London Road Casualties 2010-2014</a> 
+        <a class="title-header logo" href="#top-of-page">London Road Casualties 2010-2014</a> 
       </div>
       
       <div class="nav-buttons">
@@ -76,149 +76,155 @@
       
     </nav>
     
-  
+    
     
 <!-- Header -->      
     <header>
       <img class="img-fluid" src="assets/images/header_image.png" alt="time lapse image of streaky lights from traffic and clear red phone box">
     </header>
     
-    
+    <main id="back-to-top">
 <!-- Introduction -->     
-    <section> 
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-10 card text-center card-styling intro">
-            <h3 class="intro-header">London Road Casualties 2010-2014</h3>
-            <p> This dashboard displays a data set of casualties on the roads of London between 2010-2014. The data includes all age groups and both
-            severe and fatal incidents. This set of charts and data will help give you an idea of the safest areas on London to be on the road or a pedestrians.
-            It will give you an idea of areas to avoid at what time.
-            </p>
+      <section> 
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-10 card text-center card-styling intro">
+              <h3 class="intro-header">London Road Casualties 2010-2014</h3>
+              <p> This dashboard displays a data set of casualties on the roads of London between 2010-2014. The data includes all age groups and both
+              severe and fatal incidents. This set of charts and data will help give you an idea of the safest areas on London to be on the road or a pedestrians.
+              It will give you an idea of areas to avoid at what time.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>  
-    
-
-<!-- Top section stats -number displays-->   
-    <section class="section-spacing">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
-            <h5 class="chart-title">No. of incidents between the years 2010-2014</h6>
-            <div class="num-display" id="total-num-of-incidents"><i class="fas fa-clipboard-list top-stats-icon"></i>13,206</div>
-            <p> London had a population of over <a href="https://www.ukpopulation.org/london-population/" target="blank">8 million</a> and around
-            <a href="http://www.uncsbrp.org/tourism.htm" target="blank">30 million</a> visitors per year over this time period. You are unlikely
-            to be involved in a traffic incident even though the roads can get very busy.
-            </p>
-          </div>
-          <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
-            <h5 class="chart-title">Percentage of incidents that are serious</h6>
-            <div class="num-display" id="percentage-incidents-serious"><i class="fas fa-exclamation top-stats-icon"></i></div>
-            <p>You are much more likely to have a serious injury if in volved in a traffic incident in London rather than a fatal one. This could potentially be a life changing injury though.</p>
-          </div>
-          <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
-            <h5 class="chart-title">Percentage of incidents that are fatal</h6>
-            <div class="num-display" id="percentage-incidents-fatal"><i class="fas fa-skull-crossbones top-stats-icon"></i></div>
-            <p>Although the number of fatal incidents is low you should still stay vigilant when out and about on the streets of London. The percentage if fatal incidents increases to
-            7% when the data is filtered to just pedestrians.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
-    
-    
-<!-- Graphs -->  
-
-<!-- Pie and donut section -->
-    <section class="section-spacing">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          
-          <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section">
-            <h5 class="chart-title">Percentage of males and females involved in incidents</h3>
-          <div id="male_female_casualties"></div>
-          <p class="chart-info"> Males are more than twice as likely to be a casualty in a road accident in London. This is true
-          acorss the UK with men accounting for 74% road traffic deaths and 70% of serious injuries according to the 
-          road safety charity <a href="https://www.brake.org.uk/facts-resources/1593-driver-gender" target="blank">Brake.</a> 
-          According to their data, on average men also cover more than twice as many miles as women per year.</p>
-          </div>
-          
-          <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section">
-            <h5 class="chart-title">Percentage of casualties in each age range invloved in incidents</h3>
-          <div id="casualties_age_range" class="age_donut"></div>
-          <p>Teenagers and young adults are the most likely to be involved in an incident with more than half of incidents 
-          involve 13-38 year olds.</p>
-          </div>
-          
-          <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section ">
-            <h5 class="chart-title">Percentage of casulaties per casualty class involved in incidents</h3>
-          <div id="casualty_class_percentage"></div>
-          <p class="chart-info">Drivers and riders are more likely to be casualties in the incidents, pedestrians are about 20% less likely 
-          to be involved in an incident. You will be safest as a passenger.</p>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    
- 
-
-<!-- Bar chart- incidents per area -->
-    <section class="section-spacing">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-10 card text-center card-styling area-incidents-barchart">
-            <h5 class="chart-title">Number of incidents per areas of London</h5>
-            <p class="chart-intro">This chart will give you an idea of what areas have the most incidents. You can click on the individual bars for a certain area 
-            to filter the other charts show details for just that area.</p>
-            <div id="incidents_per_area" class="incidents_per_area_style"></div>
-            <p class="chart-info">Westminster and lambeth are quite risky areas perhaps due to the fact that they have a high tourist foot fall as
-            well has many businesses and offices. Many central areas are very busy most of the day and with so many pedestrians, cyclists and general
-            road users trying to get somewhere, often in a hurry it is no surprise accidents will happen.</p>
+      </section>  
+      
+  
+  <!-- Top section stats -number displays-->   
+      <section class="section-spacing">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
+              <h5 class="chart-title">No. of incidents between the years 2010-2014</h6>
+              <div class="num-display" id="total-num-of-incidents"><i class="fas fa-clipboard-list top-stats-icon"></i>13,206</div>
+              <p> London had a population of over <a class="link-style" href="https://www.ukpopulation.org/london-population/" target="blank">8 million</a> and around
+              <a class="link-style" href="http://www.uncsbrp.org/tourism.htm" target="blank">30 million</a> visitors per year over this time period. You are unlikely
+              to be involved in a traffic incident even though the roads can get very busy.
+              </p>
+            </div>
+            <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
+              <h5 class="chart-title">Percentage of incidents that are serious</h6>
+              <div class="num-display" id="percentage-incidents-serious"><i class="fas fa-exclamation top-stats-icon"></i></div>
+              <p>You are much more likely to have a serious injury if in volved in a traffic incident in London rather than a fatal one. This could potentially be a life changing injury though.</p>
+            </div>
+            <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
+              <h5 class="chart-title">Percentage of incidents that are fatal</h6>
+              <div class="num-display" id="percentage-incidents-fatal"><i class="fas fa-skull-crossbones top-stats-icon"></i></div>
+              <p>Although the number of fatal incidents is low you should still stay vigilant when out and about on the streets of London. The percentage if fatal incidents increases to
+              7% when the data is filtered to just pedestrians.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      
+  
+      
+      
+  <!-- Graphs -->  
+  
+  <!-- Pie and donut section -->
+      <section class="section-spacing">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            
+            <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section">
+              <h5 class="chart-title">Percentage of males and females involved in incidents</h3>
+            <div id="male_female_casualties"></div>
+            <p class="chart-info"> Males are more than twice as likely to be a casualty in a road accident in London. This is true
+            acorss the UK with men accounting for 74% road traffic deaths and 70% of serious injuries according to the 
+            road safety charity <a class="link-style" href="https://www.brake.org.uk/facts-resources/1593-driver-gender" target="blank">Brake.</a> 
+            According to their data, on average men also cover more than twice as many miles as women per year.</p>
+            </div>
+            
+            <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section">
+              <h5 class="chart-title">Percentage of casualties in each age range invloved in incidents</h3>
+            <div id="casualties_age_range" class="age_donut"></div>
+            <p>Teenagers and young adults are the most likely to be involved in an incident with more than half of incidents 
+            involve 13-38 year olds.</p>
+            </div>
+            
+            <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section ">
+              <h5 class="chart-title">Percentage of casulaties per casualty class involved in incidents</h3>
+            <div id="casualty_class_percentage"></div>
+            <p class="chart-info">Drivers and riders are more likely to be casualties in the incidents, pedestrians are about 20% less likely 
+            to be involved in an incident. You will be safest as a passenger.</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
    
-    
-<!-- Row chart- vehicle types invloved --> 
-    <section class="section-spacing">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-10 card text-center card-styling vehicle-type-rowchart">
-            <h5 class="chart-title">Row chart of vehicles types involved in incidents</h5>
-             <p class="chart-intro">Check if your choice of transport is a risky one with this chart. You can also see which to look out for, certain methods of travel are more 
-             vunerable than others. All vehicles need to keep an eye out for pedestrians, pedal bike and moter bikes weaving through traffic. Some vehicles are split 
-             by age such as car (from 2005) is cars made after 2005.</p>
-            <div id="vehicle_type" class="row-chart"></div>
-            <p class="chart-info" >Cars are by far the vehicle mst likely to be involved in an incident. However pedal cycles is the most likly to be involved in an incident in quite a few 
-            different area of London. Collectivly the various sized motorcyles are another vehicle that is likely to be involved in an accident </p>
+  
+  <!-- Bar chart- incidents per area -->
+      <section class="section-spacing">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-10 card text-center card-styling area-incidents-barchart">
+              <h5 class="chart-title">Number of incidents per areas of London</h5>
+              <p class="chart-intro">This chart will give you an idea of what areas have the most incidents. You can click on the individual bars for a certain area 
+              to filter the other charts show details for just that area.</p>
+              <div id="incidents_per_area" class="incidents_per_area_style"></div>
+              <p class="chart-info">Westminster and lambeth are quite risky areas perhaps due to the fact that they have a high tourist foot fall as
+              well has many businesses and offices. Many central areas are very busy most of the day and with so many pedestrians, cyclists and general
+              road users trying to get somewhere, often in a hurry it is no surprise accidents will happen.</p>
+            </div>
           </div>
         </div>
-      </div> 
-    </section>
-    
-    
-    
-<!-- Line chart -->  
-    <section class="section-spacing"> 
-      <div class="container-fluid">
-       <div class="row justify-content-center">
-          <div class="col-10 card text-center card-styling vehicle-type-rowchart">
-            <h5 class="chart-title">Composite line chart of the time of day incidents occur</h5>
-            <p class="chart-intro">This chart will give you an insight of what time of the day an accident os most likely to happen. Hover over each day of the week in the key to focus on the
-            line for that particular day. Also hover over the lines to see the number of incidents that occured at that time.</p>
-            <div id="comp_chart"></div>
-            <p class="chart-info">As you would expect there is a spike in incidents occur during the evening rush hours Monday to Friday as many people are trying to get home. There is a small spike during the 
-            morning rush too but the streets and roads get much more congested throughout the day. </p>
+      </section>
+      
+  <!-- Line chart -->  
+      <section class="section-spacing"> 
+        <div class="container-fluid">
+         <div class="row justify-content-center">
+            <div class="col-10 card text-center card-styling vehicle-type-rowchart">
+              <h5 class="chart-title">Composite line chart of the time of day incidents occur</h5>
+              <p class="chart-intro">This chart will give you an insight of what time of the day an accident os most likely to happen. Hover over each day of the week in the key to focus on the
+              line for that particular day. Also hover over the lines to see the number of incidents that occured at that time.</p>
+              <div id="comp_chart"></div>
+              <p class="chart-info">As you would expect there is a spike in incidents occur during the evening rush hours Monday to Friday as many people are trying to get home. There is a small spike during the 
+              morning rush too but the streets and roads get much more congested throughout the day. </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-   
+      </section>    
+      
+     
+      
+  <!-- Row chart- vehicle types invloved --> 
+      <section class="section-spacing">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-10 card text-center card-styling vehicle-type-rowchart">
+              <h5 class="chart-title">Row chart of vehicles types involved in incidents</h5>
+               <p class="chart-intro">Check if your choice of transport is a risky one with this chart. You can also see which to look out for, certain methods of travel are more 
+               vunerable than others. All vehicles need to keep an eye out for pedestrians, pedal bike and moter bikes weaving through traffic. Some vehicles are split 
+               by age such as car (from 2005) is cars made after 2005.</p>
+              <div id="vehicle_type" class="row-chart"></div>
+              <p class="chart-info" >Cars are by far the vehicle mst likely to be involved in an incident. However pedal cycles are the most likly in quite a few 
+              different area of London. Collectively the various sized motorcyles are another vehicle that is likely to be involved in an accident </p>
+            </div>
+          </div>
+        </div> 
+        
+        <div class="row">
+          <div class="col-12 back-to-top-link">
+            <a href="#back-to-top">Back to top</a>
+          </div>
+        </div>
+      </section>
+    
+    </main>
     
 <!-- Footer -->
     <footer class="container-fluid">
@@ -231,8 +237,6 @@
     </footer>
     
 </body>
-
-
 
 
 </html>

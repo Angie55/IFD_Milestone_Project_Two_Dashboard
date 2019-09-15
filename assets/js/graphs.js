@@ -6,10 +6,7 @@
 function makeGraphs(error, casualtyData) {
     var ndx = crossfilter(casualtyData);
     
-    var parseDate = d3.time.format("%d/m%/%Y").parse;
-        casualtyData.forEach(function(d){
-            d.date = parseDate(d.date);
-        });
+    
     
     // Top section number displays
     show_display_severity_percent(ndx, "Serious", "#percentage-incidents-serious");
@@ -182,6 +179,7 @@ function show_incidents_per_area(ndx) {
           .dimension(dim)
           .group(group)
           .transitionDuration(500)
+          .clipPadding(20)
           .renderLabel(true)
           .x(d3.scale.ordinal())
           .xUnits(dc.units.ordinal)
@@ -261,7 +259,7 @@ function show_line_chart(ndx) {
             .margins({top:30, right: 80, bottom: 50, left: 50})
             .useViewBoxResizing(true)
             .dimension(hour_dim)
-            .x(d3.time.scale().domain([minHour, maxHour]))
+            .x(d3.scale.linear().domain([minHour, maxHour]))
             .yAxisLabel("No of incidents")
             .xAxisLabel("Hour of the day")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))

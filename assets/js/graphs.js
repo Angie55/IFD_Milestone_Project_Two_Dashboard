@@ -68,7 +68,7 @@ function show_percentage_male_female(ndx) {
     var pieColours = d3.scale.ordinal()
         .range([ '#113B92', '#0a5de0']);
     
-    var dim = ndx.dimension(dc.pluck('sex'))
+    var dim = ndx.dimension(dc.pluck('sex'));
     var group = dim.group();
     
     dc.pieChart("#male_female_casualties")
@@ -140,7 +140,7 @@ function show_percentage_casualty_class(ndx) {
     var pieColours = d3.scale.ordinal()
         .range(['#0a5de0', '#113B92', '#2070B0']);
     
-    var dim = ndx.dimension(dc.pluck('casualty_class'))
+    var dim = ndx.dimension(dc.pluck('casualty_class'));
     var group = dim.group();
     
     dc.pieChart("#casualty_class_percentage")
@@ -311,6 +311,6 @@ function show_vehicles_involved(ndx) {
         .colors(rowColours)
         .dimension(dim)
         .group(group)
-        .renderLabel(true)
+        .renderLabel(true);
         
 }

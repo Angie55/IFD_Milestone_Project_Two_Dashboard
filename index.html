@@ -17,13 +17,13 @@
     <!-- CSS Style Sheet -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
     <!-- JS Libraries -->
-    <script type="text/javascript" src="assets/js/d3.min.js"></script>
-    <script type="text/javascript" src="assets/js/crossfilter.min.js"></script>
-    <script type="text/javascript" src="assets/js/dc.min.js"></script>
-    <script type="text/javascript" src="assets/js/queue.min.js"></script>
-    <script type="text/javascript" src="assets/js/graphs.js"></script>
+    <script src="assets/js/d3.min.js"></script>
+    <script src="assets/js/crossfilter.min.js"></script>
+    <script src="assets/js/dc.min.js"></script>
+    <script src="assets/js/queue.min.js"></script>
+    <script src="assets/js/graphs.js"></script>
     <!-- JS Helper Click Popup -->
-    <script type="text/javascript" src="assets/js/helper_reset.js"></script>
+    <script src="assets/js/helper_reset.js"></script>
 </head>
 
 
@@ -110,12 +110,12 @@
               </p>
             </div>
             <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
-              <h5 class="chart-title">Percentage of serious incidents</h6>
+              <h5 class="chart-title">Percentage of serious incidents</h5>
               <div class="num-display" id="percentage-incidents-serious"><i class="fas fa-exclamation top-stats-icon"></i></div>
               <p>You are much more likely to have a serious injury if in volved in a traffic incident in London rather than a fatal one. This could potentially be a life changing injury though.</p>
             </div>
             <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
-              <h5 class="chart-title">Percentage of fatal incidents</h6>
+              <h5 class="chart-title">Percentage of fatal incidents</h5>
               <div class="num-display" id="percentage-incidents-fatal"><i class="fas fa-skull-crossbones top-stats-icon"></i></div>
               <p>Although the number of fatal incidents is low you should still stay vigilant when out and about on the streets of London. The percentage if fatal incidents increases to
               7% when the data is filtered to just pedestrians.</p>
@@ -132,7 +132,7 @@
           <div class="row justify-content-center">
             
             <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section">
-              <h5 class="chart-title">Percentage of males and females involved in incidents</h3>
+              <h5 class="chart-title">Percentage of males and females involved in incidents</h5>
             <div id="male_female_casualties"></div>
             <p class="pie-info"> Males are more than twice as likely to be a casualty in a road accident in London. This is true
             acorss the UK with men accounting for 74% road traffic deaths and 70% of serious injuries according to the 
@@ -141,14 +141,14 @@
             </div>
             
             <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section">
-              <h5 class="chart-title">Percentage of casualties in each age range invloved in incidents</h3>
+              <h5 class="chart-title">Percentage of casualties in each age range invloved in incidents</h5>
             <div id="casualties_age_range" class="age_donut"></div>
             <p class="pie-info">Teenagers and young adults are the most likely to be involved in an incident with more than half of incidents 
             involve 13-38 year olds.</p>
             </div>
             
             <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section ">
-              <h5 class="chart-title">Percentage of casulaties per casualty class involved in incidents</h3>
+              <h5 class="chart-title">Percentage of casulaties per casualty class involved in incidents</h5>
             <div id="casualty_class_percentage"></div>
             <p class="pie-info">Drivers and riders are more likely to be casualties in the incidents. Pedestrians are about 20% less likely 
             to be involved in an incident compared to drivers and riders for the whole data set. The risk for both pedestrians and passengers increases with certain vehicles are involved.</p>

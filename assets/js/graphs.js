@@ -74,7 +74,7 @@ function show_percentage_male_female(ndx) {
     dc.pieChart("#male_female_casualties")
         .height(300) 
         .radius(140)
-        .transitionDuration(500)
+        .transitionDuration(1000)
         .useViewBoxResizing(true)
         .dimension(dim)
         .group(group)
@@ -119,12 +119,12 @@ function show_casualties_by_age(ndx) {
     dc.pieChart("#casualties_age_range")
         .height(350) 
         .radius(140)
-        .transitionDuration(500)
+        .transitionDuration(1000)
         .useViewBoxResizing(true)
         .innerRadius(50)
         .dimension(ageDim)
         .group(ageGroup)
-        .externalLabels(25)
+        .externalLabels(20)
         .drawPaths(true)
         .colors(pieColours)
         .on('pretransition', function(chart) {
@@ -146,7 +146,7 @@ function show_percentage_casualty_class(ndx) {
     dc.pieChart("#casualty_class_percentage")
         .height(300) 
         .radius(140)
-        .transitionDuration(500)
+        .transitionDuration(1000)
         .useViewBoxResizing(true)
         .dimension(dim)
         .group(group)
@@ -178,7 +178,7 @@ function show_incidents_per_area(ndx) {
           .useViewBoxResizing(true) 
           .dimension(dim)
           .group(group)
-          .transitionDuration(500)
+          .transitionDuration(1000)
           .clipPadding(20)
           .renderLabel(true)
           .x(d3.scale.ordinal())
@@ -295,7 +295,7 @@ function show_line_chart(ndx) {
 //  Row chart of vehicles involved
 function show_vehicles_involved(ndx) {
     var rowColours = d3.scale.ordinal()
-        .range(['#CBCBCB', '#B3DAF1', '#84A5B8']);
+        .range(['#B3DAF1', '#84A5B8', '#a6a6a7']);
         
     var dim = ndx.dimension(dc.pluck('vehicle_type'));
     var group = dim.group();
@@ -304,6 +304,7 @@ function show_vehicles_involved(ndx) {
         .width(1500)
         .height(700)
         .useViewBoxResizing(true)
+        .transitionDuration(1000)
         .x(d3.scale.ordinal())
         .elasticX(true)
         .cap(15)

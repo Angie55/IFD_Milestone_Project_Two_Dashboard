@@ -3,7 +3,7 @@ body {
     padding-top: 50px;
 }
 
-h3, h2, .nav-btn, .num-display {
+h3, h2, .nav-btn, .num-display, .back-to-top-link  {
     font-family: 'Montserrat' , sans-serif;
     font-weight: 400;
 }
@@ -201,11 +201,11 @@ hr {
 }
 
 
-/*--------------------------------- Top section stats -number displays*/
+/*--------------------------------- Top section stats -number displays and pie and donut section*/
 
-.top-stats {
-    margin-right: 20px;
-    margin-left: 20px;
+.top-stats, .pie-donut-section  {
+    margin-right: 35px;
+    margin-left: 35px;
     margin-bottom: 50px;
 }
 
@@ -225,13 +225,6 @@ hr {
     padding-right: 50px;
     font-size: 1.2em;
     color: #0a5de0;
-}
-
-/*--------------------------------- Pie and donut section */
-.pie-donut-section {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 50px;
 }
 
 .pie-info {
@@ -255,7 +248,7 @@ hr {
 }
 
 .back-to-top-link a {
-    color: #EEEEEE;
+    color: rgb(45, 48, 57);
 }
 
 .back-to-top-link a:hover {
@@ -324,4 +317,9 @@ footer {
    .chart-info{
     padding: 35px 15px 20px;
     }
+    .top-stats {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+   
 }

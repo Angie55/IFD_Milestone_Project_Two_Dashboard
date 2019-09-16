@@ -3,15 +3,13 @@ body {
     padding-top: 50px;
 }
 
-h3, h2, .nav-btn, .num-display, .back-to-top-link  {
+h3, h2, .nav-btn, .num-display, .back-to-top-link, .chart-font {
     font-family: 'Montserrat' , sans-serif;
-    font-weight: 400;
 }
 
 h5, nav a {
   padding-top: 20px;  
   font-family: 'Montserrat' , sans-serif;
-  font-weight: 400;
 }
 
 .link-style {
@@ -134,7 +132,7 @@ nav img {
 }
 
 .help-body {
-    padding: 5px 16px;
+    padding: 15px 16px 5px;
 }
 
 .help_close:hover,
@@ -152,10 +150,6 @@ nav img {
   to {top: 0; opacity: 1}
 }
 
-hr {
-    background-color: #EEEEEE;
-    max-width: 80%;
-}
 /*--------------------------------- Header*/
 
 .img-fluid {
@@ -178,13 +172,15 @@ hr {
 
 /*--------------------------------- General chart sections styling*/
 
+ 
+
 .section-spacing {
     margin-bottom: 50px;
 }
 
 .card-styling {
     background-color: #EEEEEE;
-    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.50);
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.40);
 }
 
 .chart-title {
@@ -228,7 +224,7 @@ hr {
 }
 
 .pie-info {
-    padding: 25px 20px 5px;
+    padding: 25px 5px 5px;
 }
 
 /*--------------------------------- Bar charts of incidents per area */
@@ -321,5 +317,4 @@ footer {
         margin-left: 25px;
         margin-right: 25px;
     }
-   
 }

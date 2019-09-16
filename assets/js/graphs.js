@@ -118,13 +118,13 @@ function show_casualties_by_age(ndx) {
     
     dc.pieChart("#casualties_age_range")
         .height(350) 
-        .radius(140)
+        .radius(130)
         .transitionDuration(1000)
         .useViewBoxResizing(true)
         .innerRadius(50)
         .dimension(ageDim)
         .group(ageGroup)
-        .externalLabels(20)
+        .externalLabels(18)
         .drawPaths(true)
         .colors(pieColours)
         .on('pretransition', function(chart) {

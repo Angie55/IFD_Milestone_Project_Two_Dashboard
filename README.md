@@ -146,14 +146,66 @@ and gives key information or tips if needed. A few lines follow each chart that 
 
 ## Testing
 
+The index.html, style.css, graphs.js and helper_reset.js were all run through the approprate inline code validators and any errors corrected.
+
 ### Client goals/journey testing
 
+Client can:
+- Easily figure out what the site is about.
+- Instantly have information visible and can see where to find help.
+- Recognise a familiar layout with features like help and reset in a predictable place.
+- See the help and reset at all time while viewing the charts.
+- See a clear display of charts and information.
+- Get good clear feedback when hovering over navigation, buttons and links.
+- Understand what they are looking at by the title if they choose not to read the information.
+- Read more on each chart introduction that will help guide them.
+- Read simple analyse under charts and draw their own conclusions.
+- Interact with charts to explore data.
+- Reset data displays at any time.
+- See a range of data that tells them something new with each display.
+- See a variety of charts to make the data more interesting.
+- Feel like they have a good set of information on the subject.
+- See the raw information and find other data sets by clicking link to data source.
+- Find more detail and where information was sourced for some of the facts withi the text by clicking the link.
+- Won't lose where they are when following links as they open in a new tab.
+- Use the back to top link to quickly go back up.
+- Click the logo header on larger screens to go back to the top/home.
+
+### Manual testing
+
+Alot of manual testing was carried out along the way, testing new changes as they were made. Then further checks were made to test everything when the project was ready for submission.
+
+- Page links- all open in a new tab and hover effect works.
+- Header link- correctly takes users to the top od the page and hover effect works.
+- Social media links - Git hub link in footer opens in a new tab and hover effect works.
+- Buttons- Hover effect on both buttonc works.
+- Help modal- opens and displays well, there are grammatical errors, information is clear and the modal colse button is obvious and works.
+- Reset- correctly resets the data.
+- Back to top link takes use back to the top of the charts.
+- All images and the favicon loaded on each page. The images are responsive.
+- The page is fully responsive and resize with all correct positioning and spacing. There are some issues with the donut chart and the way charts display in internet explorer which is mentioned below.
+- Page content was proofed to check content made sense and there were no grammatical errors I am aware of.
 
 ### Cross browser/device testing
+
+**iMac 21.5inch screen**- 
+
+- Chrome- resizing the screen from the smallest to largest size. Also using the developer tools to check site all devices available in portrait and landscape mode.
+
+- Safari – resizing the screen from the smallest to largest size.
+
+- Firefox- resizing the screen from the smallest to largest size. Also using Firefox developer tools to view site on all available devices in portrait and landscape.
+
+**iPhone 5SE**– 
+- Safari and Chrome- portrait and landcape.
+
+Checked site across several versions of browsers on [Browserly](https://www.browserling.com/)
 
 
 
 ### Issues found and resolved -
+- Grey used in charts was too close to the default grey that the charts go when filtered, I changed the shade so the differenc can be seen.
+- Spelling and grammatical errors updated and commited.
 
 
 ### Left to resolve-

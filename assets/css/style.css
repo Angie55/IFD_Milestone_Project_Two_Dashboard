@@ -30,7 +30,6 @@ h5, nav a {
 }
 
 
-
 /*--------------------------------- Main Navigation*/
 nav {
     height: 50px;
@@ -161,10 +160,9 @@ nav img {
 
 /*--------------------------------- Intro section*/
 .intro {
-    padding: 20px;
+    padding: 25px;
     margin-top: 50px;
     margin-bottom: 50px;
-
 }
 
 .intro-header {

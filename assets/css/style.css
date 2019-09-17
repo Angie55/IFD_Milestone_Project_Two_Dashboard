@@ -29,6 +29,10 @@ h5, nav a {
     fill: black;
 }
 
+.main-container {
+    max-width: 90%;
+}
+
 /*--------------------------------- Main Navigation*/
 nav {
     height: 50px;

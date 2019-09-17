@@ -48,13 +48,13 @@
               </div>
               <div class="help-body">
                 <p>This dashboard uses interactive charts to display a data set on London road casualties between 2010-2014. Most of the charts can filtered to specific 
-                data by clicking the sections that display data, this will show across all the charts. For example if you click 'Female' in the first piechart all the charts will show 
+                data by clicking the sections that display data, this will show across all the charts. For example if you click 'Female' in the first pie chart all the charts will show 
                 only data for females. Or if you click Ealing on the bar chart you will only see the data for Ealing across all charts. If you click multiple sections you will 
                 see combined data so if you had clicked Ealing and then Islington in the bar char you will see combined results across the charts.
                 </p>
                 <p>Please note: the first number display showing the number of incidents 2010-2014 will not change and the 2nd number display showing percentage
-                of severe and fatal incidents are not clickable but will change when the charts are clicked to reflect that specific data set. Clicking the line chart will also not chnage the display
-                across other charts but the data the chart itself display will repond to clicking the other charts.
+                of severe and fatal incidents are not clickable but will change when the charts are clicked to reflect that specific data set. Clicking the line chart will also not change the displays
+                across other charts but the data on that chart itself will repond to clicking the other charts.
                 </p>
                 <p>
                 To reset the data at anytime click the 'Reset' button at the top right of the screen in the main navigation bar, this will be visible as you scroll
@@ -78,7 +78,7 @@
       <img class="img-fluid" src="assets/images/header_image.png" alt="time lapse image of streaky lights from traffic and clear red phone box">
     </header>
     
-    <main id="back-to-top">
+    <main id="back-to-top" class="container-fluid main-container">
       
 <!-- Introduction -->     
       <section> 
@@ -111,12 +111,12 @@
             <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
               <h5 class="chart-title">Percentage of serious incidents</h5>
               <div class="num-display" id="percentage-incidents-serious"><i class="fas fa-exclamation top-stats-icon"></i></div>
-              <p>You are much more likely to have a serious injury if in volved in a traffic incident in London rather than a fatal one. This could potentially be a life changing injury though.</p>
+              <p>You are much more likely to have a serious injury if involved in a traffic incident in London rather than a fatal one. This could potentially be a life changing injury though.</p>
             </div>
             <div class="col-xl-3 col-md-10 card text-center card-styling top-stats">
               <h5 class="chart-title">Percentage of fatal incidents</h5>
               <div class="num-display" id="percentage-incidents-fatal"><i class="fas fa-skull-crossbones top-stats-icon"></i></div>
-              <p>Although the number of fatal incidents is low you should still stay vigilant when out and about on the streets of London. The percentage if fatal incidents increases to
+              <p>Although the number of fatal incidents is low you should still stay vigilant when out and about on the streets of London. The percentage of fatal incidents increases to
               7% when the data is filtered to just pedestrians.</p>
             </div>
           </div>
@@ -143,7 +143,7 @@
               <h5 class="chart-title">Percentage of casualties in each age range invloved in incidents</h5>
             <div id="casualties_age_range" class="chart-font"></div>
             <p class="pie-info">Teenagers and young adults are the most likely to be involved in an incident with more than half of incidents 
-            involve 13-38 year olds.</p>
+            involving 13-38 year olds.</p>
             </div>
             
             <div class="col-xl-3 col-10 card text-center card-styling pie-donut-section ">
@@ -166,7 +166,7 @@
               <p class="chart-intro">This chart will give you an idea of what areas have the most incidents. You can click on the individual bars for a certain area 
               to filter the other charts show details for just that area.</p>
               <div id="incidents_per_area" class="incidents_per_area_style chart-font"></div>
-              <p class="chart-info">Westminster and Lambeth are quite risky areas perhaps due to the fact that they have a high tourist foot fall as
+              <p class="chart-info">Westminster and Lambeth are quite risky areas perhaps due to the fact that they have a high tourist footfall as
               well has many businesses and offices. Many central areas are very busy most of the day and with so many pedestrians, cyclists and general
               road users trying to get somewhere, often in a hurry, it is no surprise accidents will happen.</p>
             </div>
@@ -181,9 +181,9 @@
             <div class="col-10 card text-center card-styling">
               <h5 class="chart-title">Composite line chart of the time of day incidents occur</h5>
               <p class="chart-intro">This chart will give you an insight of what time of the day an accident is most likely to happen. Hover over each day of the week in the key to the top, left of the chart to focus on the
-              line for that particular day. Hover over the lines to see the number of incidents that occured at that time.</p>
+              line for that particular day. Hover over the lines, inline with a hour, to see the number of incidents that occured at that time.</p>
               <div id="comp_chart" class="chart-font"></div>
-              <p class="chart-info">As you would expect there is a spike in incidents occur during the evening rush hours Monday to Friday as many people are trying to get home. There is a small spike during the 
+              <p class="chart-info">As you would expect there is a spike in incidents that occur during the evening rush hours Monday to Friday as many people are trying to get home. There is a small spike during the 
               morning rush too but the streets and roads get much more congested throughout the day. </p>
             </div>
           </div>
@@ -196,9 +196,9 @@
           <div class="row justify-content-center">
             <div class="col-10 card text-center card-styling">
               <h5 class="chart-title">Row chart of vehicles types involved in incidents</h5>
-               <p class="chart-intro">Check if your choice of transport is a risky one with this chart, certain methods of travel are more obviously more
+               <p class="chart-intro">Check if your choice of transport is a risky one with this chart, certain methods of travel are obviously more
                vunerable than others. It can be hard for some vehicles to keep an eye out for pedestrians, pedal bike and moter bikes weaving through traffic. Some vehicles are split 
-               by age such as 'Car (from 2005)' is 'Car' which is cars made after 2005.</p>
+               by age such as 'Car (from 2005)' is 'Car' which is cars made after 2005. Hover over each bar to see the total for each vehicle type.</p>
               <div id="vehicle_type" class="chart-font"></div>
               <p class="chart-info" >Cars are by far the vehicle most likely to be involved in an incident. However pedal cycles are the most likly in quite a few 
               different area of London. Collectively the various sized motorcyles are another vehicle that is likely to be involved in an accident.</p>
@@ -213,7 +213,7 @@
           </div>
         </div>
       </section>
-    
+      
     </main>
     
 <!-- Footer -->

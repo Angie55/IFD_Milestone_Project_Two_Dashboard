@@ -36,7 +36,7 @@ h5, nav a {
 /*--------------------------------- Main Navigation*/
 nav {
     height: 50px;
-    background-color: rgba(45, 48, 57, 0.8);
+    background-color: rgba(17, 59, 146 ,0.9);
     position: fixed;
     width: 100%;
     top: 0;
@@ -184,7 +184,7 @@ nav img {
 
 .card-styling {
     background-color: #EEEEEE;
-    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.40);
+    box-shadow: 10px 10px 4px 0px rgba(0,0,0,0.50);
 }
 
 .chart-title {

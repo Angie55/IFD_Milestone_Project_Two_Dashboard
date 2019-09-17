@@ -319,4 +319,8 @@ footer {
         margin-left: 25px;
         margin-right: 25px;
     }
+    .help_close {
+        font-size: 1.5em;
+        left: 93%;
+    }
 }

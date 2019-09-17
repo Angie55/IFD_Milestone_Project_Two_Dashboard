@@ -4,7 +4,7 @@ Link to deployed website [London Road Casualties Dashboard](https://angie55.gith
 
 This dasboard displays the data for London Road Casualties 2010-2014. The primary goal of the dashboard is to give users an insight into the details of each incident.
 It was designed to be easy to use with simple displays that the user can use to get a good range of information. The interactive charts give the user the opportunity
-to drill down to specific details as much as they need and can feel informed as an individual. As a cyclsit who commutes through central London nearly everyday I found the data
+to drill down to specific details as much as they need and can feel informed as an individual. As a cyclist who commutes through central London nearly everyday I found the data
 to be interesting and informative.
 
 ### Developer goals
@@ -13,7 +13,7 @@ to be interesting and informative.
 
 - To create an interactive dashboard that in intuitive for users and has help available.
 
-- A first attempt at using d3, dc and crossfilters for a data set i have chosen and styling the page in line with the data.
+- A first attempt at using d3, dc and crossfilters for a data set I have chosen and styling the page in line with the data.
 
 ### Customer goals
 
@@ -45,11 +45,11 @@ to be interesting and informative.
 
 As a visitor to the dashboard I want:
 
-- See a range of information on the subject of casualties on the roads of London that is simple and easy to digest.
+- To see a range of information on the subject of casualties on the roads of London that is simple and easy to digest.
 
-- Have useful information on using the dashboard easily available to me to explain how to use it.
+- To have useful information on using the dashboard easily available to me to explain how to use it.
 
-- I want to choose when any help pop ups are launched and not have annoying pop ups before i have had a chance to view the page.
+- I want to choose when any help pop ups are launched and not have annoying pop ups before I have had a chance to view the page.
 
 - I want to know where the data came from.
 
@@ -59,7 +59,7 @@ As a visitor to the dashboard I want:
 
 - I want a brief introduction and information on charts to help me in my understanding as I analyse and draw my own conclusions.
 
-- I would like the site to be more visually pleasing than goverment information sites but with some familiarity.
+- I would like the site to have some familiarity with goverment information sites so I trust the data.
 
 **Design choices**
 

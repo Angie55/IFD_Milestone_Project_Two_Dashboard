@@ -29,9 +29,7 @@ h5, nav a {
     fill: black;
 }
 
-.main-container {
-    max-width: 90%;
-}
+
 
 /*--------------------------------- Main Navigation*/
 nav {
@@ -316,8 +314,8 @@ footer {
     padding: 35px 15px 20px;
     }
     .top-stats {
-        margin-left: 25px;
-        margin-right: 25px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .help_close {
         font-size: 1.5em;

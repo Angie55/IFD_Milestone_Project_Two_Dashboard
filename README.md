@@ -69,20 +69,20 @@ As a visitor to the dashboard I want:
 using, much lighter fonts were needed to fit the lighter, floaty feel of the cards. Montserret and Lato are easy to read, friendly fonts that work great with the overall look and feel.
 
 - Text-align- The text is centered in the cards as this looks and flows better with the chart displayed. Left align text was tested and looked odd with the centered chart and cards. As the text is fairly short
-I believe it works for the cards. The help and main intro are left aligned as there is more text and is is more suitable.
+I believe it works for the cards. The help and main intro are left aligned as there is more text and it is more suitable.
 
 - Icons- Font awesome icons are used to make the number displays more appealing, create a clear close button on the help modal and add a nice Github logo on the footer.
 
 - Cards- This bootstrap design feature is used to give each display or chart it's own clear section to make the whole page easier to read as it is easy to seperate each bit of data being rendered.
 Seperating information like this is often used of offical London gov sights too.
 
-- Imagery- Clear, modern imagery is used for the header and background. The boldness is a good contrast to the simple colours and layout.
+- Imagery- A clear related image is used for the header. The boldness is a good contrast to the simple colours and layout.
 
 - Box shadows- These are used to help the main content stand out even more against the background, giving a floating effect.
 
 - Transitions- These are kept simple as there is enough interaction and things going on within the page but the feedback is still clear to the users as they hover.
 
-- Small screen- Each chart has a full row so the content can been seen clearly. Padding is reduced in the text.
+- Small screen- Each chart has a full row so the content can been seen clearly.
 
 - Content displayed on one page so the user can compare data, the content is spread enough to have a clear display of each chart.
 
@@ -113,7 +113,7 @@ to read. There is a clear close button to close the modal.
 - Main intro- This gives the user enough information to use and understand the dashboard while mentioning the 'Help' option if they would like to read more.
 
 - Charts- Each chart has a clear title that the user can read and look straight to the content and understand what it displays if they do not want to read. The intro to each chart is brief
-and gives key information or tips if needed. A few lines follow each chart that clarify key points but leave further anaysis to the user.
+and gives key information or tips if needed. A few lines follow each chart that clarify key points but leave further analysis to the user.
 
 - Number displays- Use a large font size and icons for a clear, bold display. 
 
@@ -121,38 +121,38 @@ and gives key information or tips if needed. A few lines follow each chart that 
 
 - Bar chart- two colours are used for clear seperation but no more so there is not too much going on visually. The x-axis labels are rotated so they fit and can be clearly read.
 
-- Line chart- This features a few colour, traffic light colors, not used in charts before but are necassary for a good contrast so the chart is easy to read and analysed.
+- Line chart- This features a few colours (traffic light colors) not used in charts before but are necassary for a good contrast so the chart is easy to read and analysed.
 
 - Row chart- Three colours are used to seperate each row, different colours from the bar chart to add variety but still familiar colours that have been used before. The font was changed to black
 to make the labels easier to read.
 
 **Features to implement in the future**
 
-- A drop down filer could be added to the page that allows the user to filter the data by individual year.
-- 
-- A map could be added using the Google maps API for used to see their route and if it goes through a riasky area.
+- A drop down filter could be added to the page that allows the user to filter the data by individual year.
+
+- A map could be added using the Google maps API for users to see their route and if it goes through a risky area.
 
 ## Technologies used 
 
 -   HTML 
 -   CSS 
--   [Adobe Photoshop CC](https://www.photoshop.com/) - used to resize header, design favicon and logo and create background tarmac image.
+-   [Adobe Photoshop CC](https://www.photoshop.com/) - used to resize header, design favicon and logo.
 -   [git](https://git-scm.com/) - used for version control.
 -   [GitHub]() - used as a remote repository and the hosting of this site.
 -	[AWS Cloud9 IDE](https://us-east-1.console.aws.amazon.com/cloud9/ide) – Used for building the website and viewing developments.
 -	[Bootstrap](https://getbootstrap.com/) – used mainly to help with the layout and making the site responsive.
 -	[Google Fonts](https://fonts.google.com/) – a link to Google fonts is used to style fonts on the website.
--	[Font Awesome](https://fontawesome.com/)- used for icons on the website.
--   [JavaScript](https://www.javascript.com)- used for the clickable pop up help menu and reset button. 
--   The following Javascript libraries were also used to create and display charts
+-	[Font Awesome](https://fontawesome.com/) - used for icons on the website.
+-   [JavaScript](https://www.javascript.com) - used for the clickable pop up help menu, reset button and to render and style the data/charts on the page.
+The following Javascript libraries were also used to create and display charts:
 -   [D3.js](https://d3js.org/) - for manipulating documents based on data.
--   [DC.js](https://dc-js.github.io/dc.js/) -uses D3 to render charts in a SVG format that is easy to work with. It uses crossfilter support to render charts that are data driven and reactive.
--   [Crossfilter.js](http://square.github.io/crossfilter/) - used to creat multi-dimensional datasets, supports DC to provide fast interaction. 
--   [D3-queue.js](https://github.com/d3/d3-queue) used to load the dataset before running any other files.
+-   [DC.js](https://dc-js.github.io/dc.js/) - uses D3 to render charts in a SVG format that is easy to work with. It uses crossfilter support to render charts that are data driven and reactive.
+-   [Crossfilter.js](http://square.github.io/crossfilter/) - used to create multi-dimensional datasets, supports DC to provide fast interaction. 
+-   [D3-queue.js](https://github.com/d3/d3-queue) - used to load the dataset before running any other files.
 
 ## Testing
 
-The index.html, style.css, graphs.js and helper_reset.js were all run through the approprate inline code validators and any errors corrected.
+The index.html, style.css, graphs.js and helper_reset.js were all run through the appropriate online code validators and any errors corrected.
 
 ### Client goals/journey testing
 
@@ -172,7 +172,7 @@ Client can:
 - See a variety of charts to make the data more interesting.
 - Feel like they have a good set of information on the subject.
 - See the raw information and find other data sets by clicking link to data source.
-- Find more detail and where information was sourced for some of the facts withi the text by clicking the link.
+- Find more detail and where information was sourced for some of the facts by clicking the link.
 - Won't lose where they are when following links as they open in a new tab.
 - Use the back to top link to quickly go back up.
 - Click the logo header on larger screens to go back to the top/home.
@@ -182,14 +182,14 @@ Client can:
 Alot of manual testing was carried out along the way, testing new changes as they were made. Then further checks were made to test everything when the project was ready for submission.
 
 - Page links- all open in a new tab and hover effect works.
-- Header link- correctly takes users to the top od the page and hover effect works.
+- Header link- correctly takes users to the top of the page and hover effect works.
 - Social media links - Git hub link in footer opens in a new tab and hover effect works.
-- Buttons- Hover effect on both buttonc works.
-- Help modal- opens and displays well, there are grammatical errors, information is clear and the modal colse button is obvious and works.
+- Buttons- Hover effect on both buttons works.
+- Help modal- opens and displays well, there are no grammatical errors, information is clear and the modal close button is obvious and works.
 - Reset- correctly resets the data.
-- Back to top link takes use back to the top of the charts.
-- All images and the favicon loaded on each page. The images are responsive.
-- The page is fully responsive and resize with all correct positioning and spacing. There are some issues with the donut chart and the way charts display in internet explorer which is mentioned below.
+- Back to top link takes the user back to the top of the charts.
+- The image, logo and the favicon loaded on each page. The images are responsive.
+- The page is fully responsive and resizes with all correct positioning and spacing. There are some issues with the donut chart and the way charts display in internet explorer which is mentioned below.
 - Page content was proofed to check content made sense and there were no grammatical errors I am aware of.
 
 ### Cross browser/device testing
@@ -208,18 +208,18 @@ Alot of manual testing was carried out along the way, testing new changes as the
 Checked site across a few versions of browsers on [Browserly](https://www.browserling.com/) 
 
 ### Issues found and resolved -
-- Grey used in charts was too close to the default grey that the charts go when filtered, I changed the shade so the differenc can be seen.
+- Grey used in charts was too close to the default grey that the charts go when filtered, I changed the shade so the difference can be seen.
 - Spelling and grammatical errors updated and commited.
-- Removed background image as it was too distracting and dulled the look of floating cards. I then had to chage the font to something much ligher to fit the overlook.
+- Removed background image as it was too distracting and dulled the look of floating cards. I then had to change the font to something much ligher to fit the overall look.
 I then changed the header image as it looked too red with everything else, this led to me changing the nav colour so it looked better with everything. 
-- The card row needed to be changed to 12 so they looked better on a small screen.
+- The card row size needed to be 12 on smaller screens so they looked better.
 - Adjusted close button on help modal as it was too far to the right of the page and not very visible on tablets and mobiles.
 
 ### Left to resolve-
-- Internet explorer chart display very small, i believe this to be a known issue but will look into if there are any known fixes in future.
-- The donut chart not displaying well all the time, at time the labels are cut off even on the same bowser of i have resozed the screen. I believe this is a problamatic 
-pie stype to use and i would look to replace it unless I can find a solution to replace it.
-- The charts do not have to be fully repsonsive for this project as there dc charts work best on desktop. I have tried to make them look as good as i can and they all display
+- Internet explorer chart display very small, I believe this to be a known issue but will look into if there are any known fixes in future.
+- The donut chart is not displaying well all the time, at times the labels are cut off even on the same browser if I have resized the screen. I believe this is a problamatic 
+pie type to use and I would look to replace it unless I can find a solution to fix it.
+- The charts do not have to be fully repsonsive for this project as dc charts work best on a desktop. I have tried to make them look as good as I can and they all display
 well enough for now but this site was designed to be viewed on a desktop. 
 
 ## Deployment

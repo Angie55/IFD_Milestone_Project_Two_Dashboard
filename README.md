@@ -3,7 +3,7 @@ Link to deployed website [London Road Casualties Dashboard](https://angie55.gith
 # London Road Casualties Dashboard
 
 This dasboard displays the data for London Road Casualties 2010-2014. The primary goal of the dashboard is to give users an insight into the details of each incident.
-It was created to be be easy to use with simple displays that the user can use to get a good range of information. The interactive charts give the user the opportunity
+It was designed to be easy to use with simple displays that the user can use to get a good range of information. The interactive charts give the user the opportunity
 to drill down to specific details as much as they need and can feel informed as an individual. As a cyclsit who commutes through central London nearly everyday I found the data
 to be interesting and informative.
 
@@ -63,21 +63,22 @@ As a visitor to the dashboard I want:
 
 **Design choices**
 
-- Colours- The main colours are blues and greys, with some shades taken from the London TFL website, this gives the feel of an offical information site. 
+- Colours- The main colours are white, blue and greys, with some shades taken from the London TFL website, this gives the feel of an offical information site. 
 
-- Fonts- The two fonts used were free fonts inspired by those used on offical London TFL sights. Hammersmith included some key familiar features such as the shape of the dot above the i's. 
- Cabin compliments hammersmith well and is clean and easy to read. It has a friendly yet inforamtive feel.
+- Fonts- The fonts orginally planned were Hammersmith and Cabin which were the closest free alternatives to the fonts used on the offical TFL webiste. After removing the darker backgound image I was
+using, much lighter fonts were needed to fit the lighter, floaty feel of the cards. Montserret and Lato are easy to read, friendly fonts that work great with the overall look and feel.
+
+- Text-align- The text is centered in the cards as this looks and flows better with the chart displayed. Left align text was tested and looked odd with the centered chart and cards. As the text is fairly short
+I believe it works for the cards. The help and main intro are left aligned as there is more text and is is more suitable.
 
 - Icons- Font awesome icons are used to make the number displays more appealing, create a clear close button on the help modal and add a nice Github logo on the footer.
 
 - Cards- This bootstrap design feature is used to give each display or chart it's own clear section to make the whole page easier to read as it is easy to seperate each bit of data being rendered.
 Seperating information like this is often used of offical London gov sights too.
 
-- Imagery- Clear, modern imagery is used for the header and background. The boldness is a good contrast to the simple colous and layout.
+- Imagery- Clear, modern imagery is used for the header and background. The boldness is a good contrast to the simple colours and layout.
 
 - Box shadows- These are used to help the main content stand out even more against the background, giving a floating effect.
-
-- Borders- The very thin blue border around each card adds to defining the card to help it stand out with the floating effect.
 
 - Transitions- These are kept simple as there is enough interaction and things going on within the page but the feedback is still clear to the users as they hover.
 
@@ -87,7 +88,12 @@ Seperating information like this is often used of offical London gov sights too.
 
 **Wireframes**
 
-Click to view [Wireframes]() created in Balsamiq.
+Click to view [Wireframes](https://balsamiq.cloud/siclxdl/p7pak5v) created in Balsamiq.
+
+**Responsive design**
+
+This site was created to be viewed on a larger screen such as laptop or desktop as this is when the charts work best. The page will be repsonsive right down to mobile size and the general
+layout and text will look good but the charts will look too small or may display oddly.
 
 ## Features
 
@@ -118,13 +124,13 @@ and gives key information or tips if needed. A few lines follow each chart that 
 - Line chart- This features a few colour, traffic light colors, not used in charts before but are necassary for a good contrast so the chart is easy to read and analysed.
 
 - Row chart- Three colours are used to seperate each row, different colours from the bar chart to add variety but still familiar colours that have been used before. The font was changed to black
-- to make the labels easier to read.
+to make the labels easier to read.
 
 **Features to implement in the future**
 
-
-
-
+- A drop down filer could be added to the page that allows the user to filter the data by individual year.
+- 
+- A map could be added using the Google maps API for used to see their route and if it goes through a riasky area.
 
 ## Technologies used 
 
@@ -138,7 +144,7 @@ and gives key information or tips if needed. A few lines follow each chart that 
 -	[Google Fonts](https://fonts.google.com/) – a link to Google fonts is used to style fonts on the website.
 -	[Font Awesome](https://fontawesome.com/)- used for icons on the website.
 -   [JavaScript](https://www.javascript.com)- used for the clickable pop up help menu and reset button. 
--   The following Javascript libraries were also used to create and dispaly charts
+-   The following Javascript libraries were also used to create and display charts
 -   [D3.js](https://d3js.org/) - for manipulating documents based on data.
 -   [DC.js](https://dc-js.github.io/dc.js/) -uses D3 to render charts in a SVG format that is easy to work with. It uses crossfilter support to render charts that are data driven and reactive.
 -   [Crossfilter.js](http://square.github.io/crossfilter/) - used to creat multi-dimensional datasets, supports DC to provide fast interaction. 
@@ -199,16 +205,22 @@ Alot of manual testing was carried out along the way, testing new changes as the
 **iPhone 5SE**– 
 - Safari and Chrome- portrait and landcape.
 
-Checked site across several versions of browsers on [Browserly](https://www.browserling.com/)
-
-
+Checked site across a few versions of browsers on [Browserly](https://www.browserling.com/) 
 
 ### Issues found and resolved -
 - Grey used in charts was too close to the default grey that the charts go when filtered, I changed the shade so the differenc can be seen.
 - Spelling and grammatical errors updated and commited.
-
+- Removed background image as it was too distracting and dulled the look of floating cards. I then had to chage the font to something much ligher to fit the overlook.
+I then changed the header image as it looked too red with everything else, this led to me changing the nav colour so it looked better with everything. 
+- The card row needed to be changed to 12 so they looked better on a small screen.
+- Adjusted close button on help modal as it was too far to the right of the page and not very visible on tablets and mobiles.
 
 ### Left to resolve-
+- Internet explorer chart display very small, i believe this to be a known issue but will look into if there are any known fixes in future.
+- The donut chart not displaying well all the time, at time the labels are cut off even on the same bowser of i have resozed the screen. I believe this is a problamatic 
+pie stype to use and i would look to replace it unless I can find a solution to replace it.
+- The charts do not have to be fully repsonsive for this project as there dc charts work best on desktop. I have tried to make them look as good as i can and they all display
+well enough for now but this site was designed to be viewed on a desktop. 
 
 ## Deployment
 
@@ -240,9 +252,15 @@ To run the project locally by cloning from GitHub:
 
 **Media**
 
-London Road Casualties by severity 2010-2014 https://data.london.gov.uk/
+Data sourced from [London Road Casualties by severity 2010-2014](https://data.london.gov.uk/dataset/road-casualties-severity-borough)
+
+Images sourced from [Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com/)
 
 **Code**
+
+Help modal built using this guide as a template [How to make a modal](https://www.w3schools.com/howto/howto_css_modals.asp)
+
+I built the basics of each chart from Codeacademy tutorial videos then googled various things I wanted to add/customise for my data.
 
 ## Disclaimer
 

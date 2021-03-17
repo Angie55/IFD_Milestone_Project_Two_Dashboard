@@ -2,9 +2,9 @@ Link to deployed website [London Road Casualties Dashboard](https://angie55.gith
      
 # London Road Casualties Dashboard
 
-This dasboard displays the data for London Road Casualties 2010-2014. The primary goal of the dashboard is to give users an insight into the details of each incident.
+This dashboard displays the data for London Road Casualties 2010-2014. The primary goal of the dashboard is to give users an insight into the details of each incident.
 It was designed to be easy to use with simple displays that the user can use to get a good range of information. The interactive charts give the user the opportunity
-to drill down to specific details as much as they need and can feel informed as an individual. As a cyclist who commutes through central London nearly everyday I found the data
+to drill down to specific details as much as they need and can feel informed as an individual. As a cyclist who commutes through central London nearly every day I found the data
 to be interesting and informative.
 
 ### Developer goals
@@ -27,7 +27,7 @@ to be interesting and informative.
 
 - To be able to interact with the data.
 
-### Customer who would be interested in this dasboard - Target client
+### Customer who would be interested in this dashboard - Target client
 
 - Anyone looking to commute in London.
 
@@ -55,26 +55,26 @@ As a visitor to the dashboard I want:
 
 - I want to be able to find specific data by using the interactive charts.
 
-- I need to be able to reset the data at anytime.
+- I need to be able to reset the data at any time.
 
 - I want a brief introduction and information on charts to help me in my understanding as I analyse and draw my own conclusions.
 
-- I would like the site to have some familiarity with goverment information sites so I trust the data.
+- I would like the site to have some familiarity with government information sites so I trust the data.
 
 **Design choices**
 
-- Colours- The main colours are white, blue and greys, with some shades taken from the London TFL website, this gives the feel of an offical information site. 
+- Colours- The main colours are white, blue and greys, with some shades taken from the London TFL website, this gives the feel of an official information site. 
 
-- Fonts- The fonts orginally planned were Hammersmith and Cabin which were the closest free alternatives to the fonts used on the offical TFL webiste. After removing the darker backgound image I was
+- Fonts- The fonts I orginally planned to use were Hammersmith and Cabin which were the closest free alternatives to the fonts used on the official TFL website. After removing the darker background image I was
 using, much lighter fonts were needed to fit the lighter, floaty feel of the cards. Montserret and Lato are easy to read, friendly fonts that work great with the overall look and feel.
 
 - Text-align- The text is centered in the cards as this looks and flows better with the chart displayed. Left align text was tested and looked odd with the centered chart and cards. As the text is fairly short
 I believe it works for the cards. The help and main intro are left aligned as there is more text and it is more suitable.
 
-- Icons- Font awesome icons are used to make the number displays more appealing, create a clear close button on the help modal and add a nice Github logo on the footer.
+- Icons- Font awesome icons are used to make the number displays more appealing, create a clear close button on the help modal and add a nice GitHub logo on the footer.
 
-- Cards- This bootstrap design feature is used to give each display or chart it's own clear section to make the whole page easier to read as it is easy to seperate each bit of data being rendered.
-Seperating information like this is often used of offical London gov sights too.
+- Cards- This bootstrap design feature is used to give each display or chart it's own clear section to make the whole page easier to read as it is easy to separate each bit of data being rendered.
+Separating information like this is often used of official London government sights too.
 
 - Imagery- A clear related image is used for the header. The boldness is a good contrast to the simple colours and layout.
 
@@ -92,7 +92,7 @@ Click to view [Wireframes](https://balsamiq.cloud/siclxdl/p7pak5v) created in Ba
 
 **Responsive design**
 
-This site was created to be viewed on a larger screen such as laptop or desktop as this is when the charts work best. The page will be repsonsive right down to mobile size and the general
+This site was created to be viewed on a larger screen such as laptop or desktop as this is when the charts work best. The page will be responsive right down to mobile size and the general
 layout and text will look good but the charts will look too small or may display oddly.
 
 ## Features
@@ -101,7 +101,7 @@ layout and text will look good but the charts will look too small or may display
 
 - Sticky nav bar with 'Help' and 'Reset' always visible as the user scrolls.
 
-- Title in main nav takes the user to the top of the page when clicked, the hover effects communcates it is a link and takes the user home/to the top as they would expect it to.
+- Title in main nav takes the user to the top of the page when clicked, the hover effects communicates it is a link and takes the user home/to the top as they would expect it to.
 
 - Help modal- This is optional for users to click is they choose to read more or need it while using the dashboard. The modal becomes a clear focus on the page and is easy 
 to read. There is a clear close button to close the modal.
@@ -119,11 +119,11 @@ and gives key information or tips if needed. A few lines follow each chart that 
 
 - Pie and donut section- pie charts are placed either side of the donut chart for symmetry. External labels give clear labelling on the donut chart.
 
-- Bar chart- two colours are used for clear seperation but no more so there is not too much going on visually. The x-axis labels are rotated so they fit and can be clearly read.
+- Bar chart- two colours are used for clear separation but no more so there is not too much going on visually. The x-axis labels are rotated so they fit and can be clearly read.
 
-- Line chart- This features a few colours (traffic light colors) not used in charts before but are necassary for a good contrast so the chart is easy to read and analysed.
+- Line chart- This features a few colours (traffic light colours) not used in charts before but are necessary for a good contrast so the chart is easy to read and analysed.
 
-- Row chart- Three colours are used to seperate each row, different colours from the bar chart to add variety but still familiar colours that have been used before. The font was changed to black
+- Row chart- Three colours are used to separate each row, different colours from the bar chart to add variety but still familiar colours that have been used before. The font was changed to black
 to make the labels easier to read.
 
 **Features to implement in the future**
@@ -144,7 +144,7 @@ to make the labels easier to read.
 -	[Google Fonts](https://fonts.google.com/) – a link to Google fonts is used to style fonts on the website.
 -	[Font Awesome](https://fontawesome.com/) - used for icons on the website.
 -   [JavaScript](https://www.javascript.com) - used for the clickable pop up help menu, reset button and to render and style the data/charts on the page.
-The following Javascript libraries were also used to create and display charts:
+The following JavaScript libraries were also used to create and display charts:
 -   [D3.js](https://d3js.org/) - for manipulating documents based on data.
 -   [DC.js](https://dc-js.github.io/dc.js/) - uses D3 to render charts in a SVG format that is easy to work with. It uses crossfilter support to render charts that are data driven and reactive.
 -   [Crossfilter.js](http://square.github.io/crossfilter/) - used to create multi-dimensional datasets, supports DC to provide fast interaction. 
@@ -179,7 +179,7 @@ Client can:
 
 ### Manual testing
 
-Alot of manual testing was carried out along the way, testing new changes as they were made. Then further checks were made to test everything when the project was ready for submission.
+A lot of manual testing was carried out along the way, testing new changes as they were made. Then further checks were made to test everything when the project was ready for submission.
 
 - Page links- all open in a new tab and hover effect works.
 - Header link- correctly takes users to the top of the page and hover effect works.
@@ -203,23 +203,23 @@ Alot of manual testing was carried out along the way, testing new changes as the
 - Firefox- resizing the screen from the smallest to largest size. Also using Firefox developer tools to view site on all available devices in portrait and landscape.
 
 **iPhone 5SE**– 
-- Safari and Chrome- portrait and landcape.
+- Safari and Chrome- portrait and landscape.
 
 Checked site across a few versions of browsers on [Browserly](https://www.browserling.com/) 
 
 ### Issues found and resolved -
 - Grey used in charts was too close to the default grey that the charts go when filtered, I changed the shade so the difference can be seen.
-- Spelling and grammatical errors updated and commited.
-- Removed background image as it was too distracting and dulled the look of floating cards. I then had to change the font to something much ligher to fit the overall look.
+- Spelling and grammatical errors updated and committed.
+- Removed background image as it was too distracting and dulled the look of floating cards. I then had to change the font to something much lighter to fit the overall look.
 I then changed the header image as it looked too red with everything else, this led to me changing the nav colour so it looked better with everything. 
 - The card row size needed to be 12 on smaller screens so they looked better.
 - Adjusted close button on help modal as it was too far to the right of the page and not very visible on tablets and mobiles.
 
 ### Left to resolve-
 - Internet explorer chart display very small, I believe this to be a known issue but will look into if there are any known fixes in future.
-- The donut chart is not displaying well all the time, at times the labels are cut off even on the same browser if I have resized the screen. I believe this is a problamatic 
+- The donut chart is not displaying well all the time, at times the labels are cut off even on the same browser if I have resized the screen. I believe this is a problematic 
 pie type to use and I would look to replace it unless I can find a solution to fix it.
-- The charts do not have to be fully repsonsive for this project as dc charts work best on a desktop. I have tried to make them look as good as I can and they all display
+- The charts do not have to be fully responsive for this project as dc charts work best on a desktop. I have tried to make them look as good as I can and they all display
 well enough for now but this site was designed to be viewed on a desktop. 
 
 ## Deployment
@@ -230,13 +230,13 @@ To deploy the project from the GitHub repository to GitHub Pages I took the foll
 
 1. Logged into **GitHub**.
 2. Chose **Angie55/IFD_Milestone_Project_Two_Dashboard** from the list of repositories.
-3. Selected **Settings** from the menu that is just under the respository, it is the last item on the right.
-4. Scrolled down to the section titled **GitHib Pages**.
+3. Selected **Settings** from the menu that is just under the repository, it is the last item on the right.
+4. Scrolled down to the section titled **GitHub Pages**.
 5. Under **Source** clicked the dropdown menu titled **None** and selected **Master Branch**.
-6. This automatically refreshes the page which took me back to the top. The website has now been delpoyed.
-7. Then I scrolled back down to the **GitHub Pages** section where there is now an link to the delpoyed website, I clicked the link to view and check it.
+6. This automatically refreshes the page which took me back to the top. The website has now been deployed.
+7. Then I scrolled back down to the **GitHub Pages** section where there is now an link to the deployed website, I clicked the link to view and check it.
  
-On submission the The Development Branch and Master Branch of this project are identical.
+On submission the Development Branch and Master Branch of this project are identical.
 
 To run the project locally by cloning from GitHub:
 1. Click this link to go to the projects [GitHub repository](https://angie55.github.io/IFD_Milestone_Project_Two_Dashboard/).

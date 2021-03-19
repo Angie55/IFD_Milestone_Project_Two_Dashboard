@@ -2,10 +2,7 @@ Link to deployed website [London Road Casualties Dashboard](https://angie55.gith
      
 # London Road Casualties Dashboard
 
-This dashboard displays the data for London Road Casualties 2010-2014. The primary goal of the dashboard is to give users an insight into the details of each incident.
-It was designed to be easy to use with simple displays that the user can use to get a good range of information. The interactive charts give the user the opportunity
-to drill down to specific details as much as they need and can feel informed as an individual. As a cyclist who commutes through central London nearly every day I found the data
-to be interesting and informative.
+This dashboard displays the data for London Road Casualties between 2010-2014. The primary goal of the dashboard is to give users an overview of the risks factors to look out for on London's roads if they are a driver, passenger or pedestrian. It was designed to be easy to use with simple displays that give a good range of information. The interactive charts give the user the opportunity to drill down to specific details as much as they need so they can feel informed as an individual. As a cyclist who commutes through central London nearly every day I found the data to be interesting and informative.
 
 ### Developer goals
 
@@ -68,10 +65,10 @@ As a visitor to the dashboard I want:
 - Fonts- The fonts I orginally planned to use were Hammersmith and Cabin which were the closest free alternatives to the fonts used on the official TFL website. After removing the darker background image I was
 using, much lighter fonts were needed to fit the lighter, floaty feel of the cards. Montserret and Lato are easy to read, friendly fonts that work great with the overall look and feel.
 
-- Text-align- The text is centered in the cards as this looks and flows better with the chart displayed. Left align text was tested and looked odd with the centered chart and cards. As the text is fairly short
+- Text-align- The text is centered in the cards as this looks and flows better with the chart displays. Left align text was tested and looked odd with the centered chart and cards. As the text is fairly short
 I believe it works for the cards. The help and main intro are left aligned as there is more text and it is more suitable.
 
-- Icons- Font awesome icons are used to make the number displays more appealing, create a clear close button on the help modal and add a nice GitHub logo on the footer.
+- Icons- Font awesome icons are used to make the number displays more appealing, to create a clear close button on the help modal and add a nice GitHub logo on the footer.
 
 - Cards- This bootstrap design feature is used to give each display or chart it's own clear section to make the whole page easier to read as it is easy to separate each bit of data being rendered.
 Separating information like this is often used of official London government sights too.
@@ -84,7 +81,7 @@ Separating information like this is often used of official London government sig
 
 - Small screen- Each chart has a full row so the content can been seen clearly.
 
-- Content displayed on one page so the user can compare data, the content is spread enough to have a clear display of each chart.
+- Content is displayed on one page so the user can compare data, the content is spread enough to have a clear display of each chart.
 
 **Wireframes**
 
@@ -92,7 +89,7 @@ Click to view [Wireframes](https://balsamiq.cloud/siclxdl/p7pak5v) created in Ba
 
 **Responsive design**
 
-This site was created to be viewed on a larger screen such as laptop or desktop as this is when the charts work best. The page will be responsive right down to mobile size and the general
+This site was created to be viewed on a larger screen such as laptop or desktop as this is the size the charts work best. The page will be responsive right down to mobile size and the general
 layout and text will look good but the charts will look too small or may display oddly.
 
 ## Features
@@ -103,7 +100,7 @@ layout and text will look good but the charts will look too small or may display
 
 - Title in main nav takes the user to the top of the page when clicked, the hover effects communicates it is a link and takes the user home/to the top as they would expect it to.
 
-- Help modal- This is optional for users to click is they choose to read more or need it while using the dashboard. The modal becomes a clear focus on the page and is easy 
+- Help modal- This is optional for users to click if they choose to read more or need it while using the dashboard. The modal becomes a clear focus on the page and is easy 
 to read. There is a clear close button to close the modal.
 
 - Buttons remain visible right down to a mobile size so they are clearly visible while scrolling on all devices.
@@ -112,7 +109,7 @@ to read. There is a clear close button to close the modal.
 
 - Main intro- This gives the user enough information to use and understand the dashboard while mentioning the 'Help' option if they would like to read more.
 
-- Charts- Each chart has a clear title that the user can read and look straight to the content and understand what it displays if they do not want to read. The intro to each chart is brief
+- Charts- Each chart has a clear title that the user can read and then look straight to the content and understand what it displays if they do not want to read the text. The intro to each chart is brief
 and gives key information or tips if needed. A few lines follow each chart that clarify key points but leave further analysis to the user.
 
 - Number displays- Use a large font size and icons for a clear, bold display. 
@@ -121,12 +118,12 @@ and gives key information or tips if needed. A few lines follow each chart that 
 
 - Bar chart- two colours are used for clear separation but no more so there is not too much going on visually. The x-axis labels are rotated so they fit and can be clearly read.
 
-- Line chart- This features a few colours (traffic light colours) not used in charts before but are necessary for a good contrast so the chart is easy to read and analysed.
+- Line chart- This features a few colours (traffic light colours) not used in charts before but are necessary for a good contrast so the chart is easy to read and analyse.
 
-- Row chart- Three colours are used to separate each row, different colours from the bar chart to add variety but still familiar colours that have been used before. The font was changed to black
+- Row chart- Three colours are used to separate each row, these are different colours from the bar chart to add variety but still familiar colours that have been used before. The font was changed to black
 to make the labels easier to read.
 
-**Features to implement in the future**
+**Potential features to improve user experience**
 
 - A drop down filter could be added to the page that allows the user to filter the data by individual year.
 
@@ -239,7 +236,7 @@ To deploy the project from the GitHub repository to GitHub Pages I took the foll
 On submission the Development Branch and Master Branch of this project are identical.
 
 To run the project locally by cloning from GitHub:
-1. Click this link to go to the projects [GitHub repository](https://angie55.github.io/IFD_Milestone_Project_Two_Dashboard/).
+1. Click this link to go to the project [GitHub repository](https://angie55.github.io/IFD_Milestone_Project_Two_Dashboard/).
 2. Click the green **Clone or download** dropdown at the top right, just above the list if files and commits.
 3. Copy the URL in the box under **Clone to HTTPS**. https://angie55.github.io/IFD_Milestone_Project_Two_Dashboard/
 4. Open **Git Bash** in your local IDE.
